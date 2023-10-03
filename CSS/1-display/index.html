@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Display" />
+    <title>CSS - Display</title>
+    <style>
+      #opacity {
+        background-color: green;
+        height: 20px;
+        opacity: 0.25;
+      }
+
+      #opacity h2 {
+        margin: 0px;
+      }
+
+      #visibility {
+        background-color: crimson;
+        height: 20px;
+        margin-top: 10px;
+        visibility: visible;
+        /* visibility: hidden; */
+        display: none;
+      }
+
+      #display {
+        background-color: blueviolet;
+        height: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* display: block;
+        display: none; */
+      }
+
+      #inline-block span {
+        margin-bottom: 10px;
+        background-color: goldenrod;
+        display: inline;
+        display: block;
+        display: inline-block;
+        height: 50px;
+        width: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>CSS - Display</h2>
+
+    <ul>
+      <li>Opacity</li>
+      <li>Visibility</li>
+      <li>Display: Block / None / Inline-Block</li>
+    </ul>
+
+    <div id="opacity">
+      <!-- <h2>Opacity</h2> -->
+    </div>
+    <div id="visibility"></div>
+    <div id="display"></div>
+
+    <div id="inline-block">
+      <span>Hello</span>
+      <span>World</span>
+    </div>
+  </body>
+</html>
