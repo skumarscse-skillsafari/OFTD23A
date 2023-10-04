@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="CSS - Rules" />
+    <title>CSS - Rules</title>
+    <style>
+      div {
+        height: 200px;
+        width: 200px;
+        background-color: green !important;
+      }
+
+      #box {
+        background-color: red;
+      }
+
+      .box {
+        background-color: black;
+      }
+    </style>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h2>CSS - Rules</h2>
+
+    <!-- 
+        1. id has higher preference than class and tag
+        2. class has higher preference than tag
+
+        // Order of preference
+        // id > class > tag
+        // inline > external > internal
+
+     -->
+
+    <div id="box" class="box"></div>
+  </body>
+</html>
