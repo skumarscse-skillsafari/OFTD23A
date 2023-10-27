@@ -139,18 +139,24 @@ strFive = "Hello"
 #  "key-N": value-N
 # }
 
-userDetails = {
-    "firstName": "John",
-    "lastName": "Jack",
-    "age": 23,
-    "isAdmin": True,
-    "hobbies": ["cricket", "newspaper", "football"],
-}
-print(userDetails)
-print(type(userDetails))
+# userDetails = {
+#     "firstName": "John",
+#     "lastName": "Jack",
+#     "age": 23,
+#     "isAdmin": True,
+#     "hobbies": ["cricket", "newspaper", "football"],
+# }
+# print(userDetails)
+# print(type(userDetails))
 
-# Accessing values
-# varName["key"]
-print(userDetails["hobbies"])
-print(userDetails["firstName"])
-print("Full name: " + userDetails["firstName"] + " " + userDetails["lastName"])
+# # Accessing values
+# # varName["key"]
+# print(userDetails["hobbies"])
+# print(userDetails["firstName"])
+# print("Full name: " + userDetails["firstName"] + " " + userDetails["lastName"])
+
+# Set
+# Syntax
+# {val-1, val-2,..., val-N}
+# listNumbers = {1, 2, 3, 4, 5, 1, 2, 3}
+# print(listNumbers)
