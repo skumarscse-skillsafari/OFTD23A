@@ -1,6 +1,8 @@
 # Creating a list
-# students = ["John", "Jack", "Prince", "Robert", "Mary"]
-# print(students)
+students = ["John", "Jack", "Prince", "Robert", "Mary"]
+print(students)
+# mixElements = [1, 2.3, "Jack", 3 + 2j, [1, 2, 3], {"name": "John"}]
+# print(mixElements)
 
 # Accessing list elements
 # varName[index]
@@ -8,15 +10,21 @@
 # right to left => starts with "-1"
 # Prince
 # print(students[2])
-# print(students[-4])
+# print(students[-3])
+# print(len(students))
+# print(students[len(students) - 1])
 # varName[startIndex: endIndex]
-# print(students[1:3])
+# print(students[1:4])
 # varName[:endIndex]
 # print(students[:4])
 # varName[startIndex:]
 # print(students[2:])
+# print(students[-4:-1])
 
 # Adding elements to list - append(), insert(), extend()
+# varName[index] = newValue
+# students[2] = "Raam"
+# print(students)
 # students.append("Raam")
 # print(students)
 # students.insert(2, "Raaj")
@@ -57,8 +65,8 @@
 # print(len(students))
 
 # Sorting - sort(), sort(reverse = True), sorted()
-# print(students)
 # students.sort()
+# print(students)
 # students.sort(reverse=True)
 # print(students)
 # print(students.sort())
@@ -83,7 +91,7 @@
 # originalFruits = ["apple", "orange", "mango", "banana"]
 # cloneFruits = []
 # for fruit in originalFruits:
-#     cloneFruits.append(fruit)
+#     cloneFruits.append(fruit)  # fruit = "banana"
 # print(cloneFruits)
 
 # Existance check - "in"
