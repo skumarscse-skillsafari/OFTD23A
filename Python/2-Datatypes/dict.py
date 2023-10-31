@@ -74,7 +74,8 @@ userDetails = {
 # print(userDetails)
 
 # copy - dict
-cloneuserDetails = userDetails.copy()
-print(cloneuserDetails)
+# cloneuserDetails = userDetails.copy()
+# cloneuserDetails = dict(userDetails)
+# print(cloneuserDetails)
 
 # nested dictionary

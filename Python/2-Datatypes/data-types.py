@@ -1,9 +1,9 @@
 # Data Types in Python
 # Numeric - Integer, Float, Complex
 # Boolean
-# Dictionary
-# Set
-# Sequence data - String, List, Tuple
+# Dictionary - Unordered collection of key: value pair
+# Set - Unordered collection of unique values
+# Sequence data - String, List - Ordered collection - mutable, Tuple - Ordered collection, immutable
 
 # Numeric
 # Integer - whole numbers between 0 and 9
