@@ -79,6 +79,8 @@
 # 0.6
 
 # Logical Operators
+# 0 === False === "" === None
+print(type(None))
 # AND, OR, NOT
 # AND, OR - Binary operator - min. two operands
 # NOT - Unary operator - one operand
@@ -100,6 +102,24 @@
 # print((30 > 50) and (20 < 50))
 # print((30 > 50) and (20 < 10))
 
+# Looks for first "falsy" value and return its original value. Will not evaluate further operands
+# If none of the operand turns "false", it return last operand original value
+# print((2 > 1) and (10 > 5) and (3 < 1) and (20 > 10))
+# print((2 > 1) and (10 > 5) and "Hello" and 10)
+# print((2 > 1) and (10 > 5) and "Hello" and 2 > 1)
+# print((2 > 1) and (10 > 5) and "Hello" and "False")
+
+# Short-circuit
+# First operand "False", return operandOne actual value
+# First operand "True", return operandTwo actual value
+# print((10 > 1) and (2 > 3))
+# print((2 > 3) and (10 < 1))
+
+# print((10 > 1) and "Hello")
+# print((10 < 1) and "Hello")
+# print(0 and "Hello")
+
+
 # OR - or
 # (50 > 20) or (20 < 3)
 # True     or False
@@ -113,6 +133,17 @@
 # print((30 > 20) or (20 < 10))
 # print((30 > 50) or (20 < 50))
 # print((30 > 50) or (20 < 10))
+
+# Looks for first "truthy" value and return its original value
+# If none of the operand turns "True", return last operand actual value
+# print(" " or False or 0 or False)
+# print("" or "Demo" or 0 or False)
+
+# Short-circuiting
+# If first operand is "True" return its original value
+# If first operand is "False" return second operands original value
+# print("Hello" or "World")
+# print(None or "World")
 
 # Not - Unary operator
 # Operand   Result
