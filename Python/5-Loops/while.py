@@ -48,13 +48,27 @@
 #     num -= 1
 
 # ["John", "Jack", "Mary", "Robert", "Prince"]
-name = ["John", "Jack", "Mary", "Robert", "Prince"]
+# name = ["John", "Jack", "Mary", "Robert", "Prince"]
 # ["John", "Jack"]
 # Print the names startsWith "J"
-index = 0
-mathchedNames = []
-while index < len(name):  # 5 < 5
-    if name[index].startswith("M"):
-        mathchedNames.append(name[index])
-    index += 1
-print(mathchedNames)
+# index = 0
+# mathchedNames = []
+# while index < len(name):  # 5 < 5
+#     if name[index].startswith("M"):
+#         mathchedNames.append(name[index])
+#     index += 1
+# print(mathchedNames)
+
+# num = 1
+# while num <= 10:
+#     if num == 5:
+#         break
+#     print(num)
+#     num = num + 1
+
+# num = 1
+# while num <= 10:
+#     if num == 5:
+#         continue
+#     print(num)
+#     num = num + 1
