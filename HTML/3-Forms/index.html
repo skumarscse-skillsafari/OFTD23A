@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Forms" />
+    <title>Forms</title>
+  </head>
+  <body>
+    <h2>Forms</h2>
+    <form action="./feedback.html" method="post">
+      <fieldset>
+        <legend>Personal Details: (User Inputs)</legend>
+        <table>
+          <tr>
+            <td><label for="firstname">First name:</label></td>
+            <td>
+              <input
+                type="text"
+                name="firstname"
+                id="firstname"
+                placeholder="Enter your firstname"
+                autocomplete="off"
+                required
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="lastname">Last name:</label></td>
+            <td>
+              <input
+                type="text"
+                name="lastname"
+                id="lastname"
+                placeholder="Enter your lastname"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="email">Email: </label></td>
+            <td>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Enter your email"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="password">Enter password:</label></td>
+            <td>
+              <input
+                type="password"
+                name="password"
+                id="password"
+                placeholder="Enter password"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="confirmpassword">Confirm password:</label></td>
+            <td>
+              <input
+                type="password"
+                name="confirmpassword"
+                id="confirmpassword"
+                placeholder="Confirm password"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="age">Age:</label></td>
+            <td>
+              <input
+                type="number"
+                name="age"
+                id="age"
+                placeholder="Enter your age"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td><label for="dob">DOB:</label></td>
+            <td><input type="date" name="dob" id="dob" /></td>
+          </tr>
+          <tr>
+            <td><label for="address">Address:</label></td>
+            <td>
+              <textarea
+                name="address"
+                id="address"
+                cols="25"
+                rows="3"
+                placeholder="Enter your address"
+              ></textarea>
+            </td>
+          </tr>
+          <tr>
+            <td><label for="uploadfile">Upload File:</label></td>
+            <td><input type="file" name="uploadfile" id="uploadfile" /></td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>User Responses</legend>
+        <table>
+          <tr>
+            <td><label for="gender">Select User Gender:</label></td>
+            <td>
+              <input type="radio" name="gender" id="male" />Male
+              <input type="radio" name="gender" id="female" />Female
+              <input type="radio" name="gender" id="others" />Others
+            </td>
+          </tr>
+          <tr>
+            <td><label for="hobbies">Select your Hobbies:</label></td>
+            <td>
+              <input type="checkbox" name="cricket" id="hobbies" />Cricket
+              <input type="checkbox" name="football" id="hobbies" />Football
+              <input type="checkbox" name="singing" id="hobbies" />Singing
+              <input type="checkbox" name="newspaper" id="hobbies" />Newspaper
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="education">Select your highest qualification:</label>
+            </td>
+            <td>
+              <!-- <select name="education" id="education" multiple> -->
+              <select name="education" id="education">
+                <option value="PG">PG</option>
+                <option value="UG">UG</option>
+                <option value="HSC">HSC</option>
+                <option value="SSLC">SSLC</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+      <fieldset>
+        <legend>Buttons</legend>
+        <table>
+          <tr>
+            <td><input type="button" value="Click" /></td>
+            <td><input type="submit" value="Submit" /></td>
+            <td><input type="reset" value="Clear" /></td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+
+    <!-- 
+        index.html?
+        firstname=John&
+        lastname=Jack&
+        email=john%40skillsafari.in&
+        password=123&
+        confirmpassword=123&
+        age=23&
+        dob=2023-11-07&
+        address=ABC%2C+Coimbatore&
+        uploadfile=React+Project+List.pdf&
+        gender=on&
+        cricket=on&
+        football=on&
+        newspaper=on&
+        education=UG#
+
+
+     -->
+  </body>
+</html>
