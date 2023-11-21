@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Datatypes" />
+    <title>Datatypes</title>
+  </head>
+  <body>
+    <h2>Datatypes</h2>
+
+    <script>
+      // Datatypes
+      // 1. Primitive datatype
+      // Number, BigInt, String, Boolean
+      // undefined, null, NaN, Symbol
+      // 2. Non-primitive datatype
+      // Object, Arrays, Functions
+
+      // Number => Positive, Negative, Decimal, Whole number
+      //   let numOne = 20;
+      //   let numTwo = 12.3;
+      //   let numThree = +23;
+      //   let numFour = -12;
+      //   console.log(typeof numOne);
+      //   console.log(typeof numTwo);
+      //   console.log(typeof numThree);
+      //   console.log(typeof numFour);
+
+      // BigInt
+      //   let bigInt = 12345678901234567890n;
+      //   console.log(typeof bigInt);
+
+      // Boolean
+      // true and false
+      //   let isAdmin = true;
+      //   let allowAccess = false;
+      //   console.log(typeof isAdmin);
+      //   console.log(typeof allowAccess);
+
+      // null
+      //   let address = null;
+      //   console.log(typeof address); // object
+
+      // undefined
+      //   let state;
+      //   console.log(typeof state); // undefined
+
+      // String
+      // Double quote = ""
+      // Single quote = ''
+      // Backticks = ``
+
+      let firstname = "John";
+      let lastname = "Jack";
+      let address = `No. 18/19, Dr.Jaganathan Street,
+Avinashi - Coimbatore main road,
+Opposite to Coimbatore Medical College,
+Coimbatore - 641 014.`;
+      //   console.log(firstname);
+      //   console.log(lastname);
+      //   console.log(address);
+
+      //   console.log(typeof firstname);
+      //   console.log(typeof lastname);
+      //   console.log(typeof address);
+
+      // Non-Primitive
+      // Objects, Arrays, Function
+      // Objects => Stores values in key: value or propertyName: propertyValue
+      // Syntax
+      // let varName = {
+      // propertyName-1: propertyValue-1,
+      // propertyName-2: propertyValue-2,
+      //              :
+      //              :
+      // propertyName-N: propertyValue-N
+      // }
+
+      let userDetails = {
+        firstName: "John",
+        "last name": "Jack",
+        age: 23,
+        isAdmin: true,
+      };
+      console.log(userDetails);
+
+      // Accessing propertyValues
+      // dot operator => "."
+      // square backet method => "[]"
+
+      // dot operator
+      // Syntax
+      // objName.propertyName
+      console.log(userDetails.firstName);
+      console.log(userDetails.lastName);
+      console.log(userDetails.age);
+      console.log(userDetails.isAdmin);
+
+      // Square bracket method
+      // Syntax
+      // objName["propertyName"]
+      console.log(userDetails["firstName"]);
+
+      // Modify existing propertyValue
+      // Syntax
+      // objName.existingPropertyName = newValue
+      userDetails.age = 18;
+      console.log(userDetails);
+
+      // Adding new property
+      // Syntax
+      // objName.newPropertyName = propertyValue;
+      userDetails.state = "Tamilnadu";
+      console.log(userDetails);
+
+      let fullName = userDetails.firstName + " " + userDetails["last name"];
+      console.log("User Fullname: " + fullName);
+
+      // Deleting existing property
+      // Syntax
+      // delete objName.existingPropertyName
+      delete userDetails.age;
+      console.log(userDetails);
+
+      // Multi-word propertyNames
+      // camelCase notation => firstName
+      // double quotes => "first name"
+    </script>
+  </body>
+</html>
