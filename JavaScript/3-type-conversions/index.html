@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Type Conversions" />
+    <title>Type Conversions</title>
+  </head>
+  <body>
+    <h2>Type Conversions</h2>
+
+    <script>
+      // Type Conversions
+      // String
+      // `` => ${}
+      // "abc", 123, "123", 456, "456" => "123456"
+      // Number("123") => 123
+      //   let numOne = prompt("Enter numberOne", 1);
+      //   let numTwo = prompt("Enter numTwo", 1);
+      //   //   let result = Number(numOne) + Number(numTwo);
+      //   console.log(numOne);
+      //   console.log(numTwo);
+      //   console.log(
+      //     `The sum of ${numOne} and ${numTwo}: ${Number(numOne) + Number(numTwo)}`
+      //   );
+      console.log(Number(true)); // 1
+      console.log(Number(false)); // 0
+      console.log(Number("false")); // NaN
+
+      // Number
+      console.log("6" / "3"); // 2
+      console.log("6" - "3"); // 3
+      console.log("6" * "3"); // 18
+      console.log("6" / "abc"); // NaN
+
+      // Number is convered into string if it is applied on string
+      //   console.log("1" + "2" + 3 + 4);
+      //   console.log(1 + 2 + 3 + "4" + "5");
+
+      let isAdmin = 1;
+      console.log(String(isAdmin));
+
+      // Boolean
+      console.log(Boolean(1));
+      console.log(Boolean(0));
+      console.log(Boolean("1"));
+      console.log(Boolean("abc"));
+      console.log(Boolean(null));
+      console.log(Boolean(undefined));
+    </script>
+  </body>
+</html>
