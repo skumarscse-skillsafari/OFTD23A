@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Loops" />
+    <title>Loops</title>
+  </head>
+  <body>
+    <h2>Loops</h2>
+
+    <script>
+      // Loops
+      // 1. while
+      // 2. do...while
+      // 3. for
+
+      // initialization => defines staring of the loop
+      // condition => defines end of the loop
+      // increment/decrement => determines loop to be run in forward/backward
+
+      // while
+      // Syntax
+      /*
+        initialization;
+        while(condition) {
+            // loop statement(s)
+            // increment/decrement
+        }
+      */
+
+      // 1 to 10
+      let i = 1;
+      while (i <= 10) {
+        if (i % 2 != 0) {
+          console.log(i); // 1
+        }
+        i++;
+      }
+
+      // if, if-else, else-if and ternary operator
+      // Syntax
+      // if(condition) {
+      // if statements
+      // }
+
+      //   if (1) {
+      //     console.log("Hello");
+      //   }
+
+      //   if(condition) {
+      //     // statement
+      //   } else {
+      //     // statement
+      //   }
+
+      //   let num = prompt("Enter a number");
+      //   if (num % 2)
+      //     // num % 2 === 1
+      //     console.log(`User entered number: ${num} is ODD`);
+      //   else console.log(`User entered number: ${num} is EVEN`);
+
+      // ternary operator
+      // Syntax
+      // condition ? true-statement : false-statement
+      //   num % 2
+      //     ? console.log(`User entered number: ${num} is ODD`)
+      //     : console.log(`User entered number: ${num} is EVEN`);
+
+      // Multiple condition
+      /*
+        if (condition-1) {
+
+        } else if (condition-2) {
+
+        } else if (condition-N) {
+
+        } else {
+
+        }
+      */
+
+      // largest of 3 numbers
+      //   let numOne = +prompt("Enter numberOne"); // 12
+      //   let numTwo = +prompt("Enter numberTwo"); // 34
+      //   let numThree = +prompt("Enter numberThree"); // 1
+      //   console.log(`Num-1 : ${numOne}`);
+      //   console.log(`Num-2 : ${numTwo}`);
+      //   console.log(`Num-3 : ${numThree}`);
+      //   if (numOne > numTwo && numOne > numThree) {
+      //     // 12 > 34 && 12 > 1
+      //     console.log(`Num-1: ${numOne} is Largest`);
+      //   } else if (numTwo > numOne && numTwo > numThree) {
+      //     // 34 > 12 && 34 > 1
+      //     console.log(`Num-2: ${numTwo} is Largest`);
+      //   } else {
+      //     console.log(`Num-3: ${numThree} is Largest`);
+      //   }
+    </script>
+  </body>
+</html>
