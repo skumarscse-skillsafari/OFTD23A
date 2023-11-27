@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Functions" />
+    <title>Functions</title>
+  </head>
+  <body>
+    <h2>Functions</h2>
+
+    <script>
+      // Function => Building block of the program
+      // Used for code re-useability
+
+      // Function Declaration
+      // Function Expression
+      // Callback Function
+      // Arrow Function
+      // IIFE => Immediate Invokable Function Expression
+
+      // Function Declaration
+      // 1. Function Creation
+      // 2. Function Calling
+
+      // Syntax
+      /*
+        // Function creation
+        function functionName(parameter-1, parameter-2,..., parameter-N) {
+            // function body
+        }
+
+        // Function Calling
+        functionName(argument-1, argument-2,..., argument-N)
+      */
+
+      //   let username = prompt("Enter username");
+      //   if (username === "John") {
+      //     console.log(`Welcome, ${username}`);
+      //   } else if (username === "Jack") {
+      //     console.log(`Welcome, ${username}`);
+      //   } else if (username === "Mary") {
+      //     console.log(`Welcome, ${username}`);
+      //   } else if (username === "Prince") {
+      //     console.log(`Welcome, ${username}`);
+      //   } else if (username === "Robert") {
+      //     console.log(`Welcome, ${username}`);
+      //   } else {
+      //     console.log(`User not exists`);
+      //   }
+
+      //   function displayUsername(username) {
+      //     console.log(`Welcome, ${username}`);
+      //   }
+
+      //   displayUsername(username);
+
+      // outer variable and local variable
+      // Scopes
+      // local variable => cannot be accessed outside the block
+      // outer variable => can be accessed and modified inside and outside the block
+      let company = "SkillSafari";
+      function displayFullname() {
+        let fname = "John";
+        let lname = "Jack";
+        let company = "EduKeys";
+        company = "SkillSafari EduKeys";
+        console.log(`User fullname: ${fname}, ${lname}`);
+        console.log(`User company: ${company}`);
+      }
+      console.log(company);
+      displayFullname();
+      console.log(company);
+    </script>
+  </body>
+</html>
