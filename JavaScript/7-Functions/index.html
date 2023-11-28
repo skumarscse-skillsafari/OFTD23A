@@ -59,18 +59,119 @@
       // Scopes
       // local variable => cannot be accessed outside the block
       // outer variable => can be accessed and modified inside and outside the block
-      let company = "SkillSafari";
-      function displayFullname() {
-        let fname = "John";
-        let lname = "Jack";
-        let company = "EduKeys";
-        company = "SkillSafari EduKeys";
-        console.log(`User fullname: ${fname}, ${lname}`);
-        console.log(`User company: ${company}`);
+      // let company = "SkillSafari";
+      // function displayFullname() {
+      //   let fname = "John";
+      //   let lname = "Jack";
+      //   let company = "EduKeys";
+      //   company = "SkillSafari EduKeys";
+      //   console.log(`User fullname: ${fname}, ${lname}`);
+      //   console.log(`User company: ${company}`);
+      // }
+      // console.log(company);
+      // displayFullname();
+      // console.log(company);
+
+      // function displayName(fname, lastname) {
+      //   return `Fullname: ${fname}, ${lastname}`;
+      // }
+
+      // let result = displayName("John", "Jack");
+      // console.log(result);
+
+      // function oddAndEven(num) {
+      //   if (num % 2) {
+      //     return "ODD Number";
+      //   } else {
+      //     return "EVEN Number";
+      //   }
+      // }
+
+      // console.log(oddAndEven(50));
+
+      // optional parameter value
+
+      // function displayName(fname, lastname = " ") {
+      //   return `Fullname: ${fname}, ${lastname}`;
+      // }
+
+      // let result = displayName("John", "Jack");
+      // console.log(result);
+
+      // propName === propValue === propName
+      // function userDetails(id, fname, lname, age, city) {
+      //   return {
+      //     id,
+      //     fname,
+      //     lname,
+      //     ageProp: age,
+      //     city,
+      //   };
+      // }
+
+      // console.log(userDetails(10001, "John", "Jack", 23, "Chennai"));
+      // console.log(userDetails(10002, "Mary", "Robert", 25, "Bangalore"));
+      // console.log(userDetails(10003, "Prince", "Raam", 28, "Coimbatore"));
+      // displayFruits();
+
+      // Function Expression => Anonymous function (function without name)
+      // function displayFruits() {
+      //   console.log(["apple", "orange", "mango", "banana"]);
+      // }
+      // displayFruits();
+
+      // Syntax
+      /*
+      // create
+       let varName = function (para-1, para-2,..., para-N) {
+        // function block
+       }
+       // calling
+       varName(arg-1, arg-2,..., arg-N)
+      */
+
+      // let displayFruits = function (fruits) {
+      //   // fruits = ["apple", "orange", "mango", "banana"]
+      //   // console.log(fruits);
+      //   return fruits;
+      // };
+      // console.log(displayFruits(["apple", "orange", "mango", "banana"]));
+
+      // Function Declaration Vs. Function Expression
+      // function displayFruits() {
+      //   console.log(["apple", "orange", "mango", "banana"]);
+      // }
+      // console.log(name);
+      // let name = "John";
+      // Hoisting
+      // TDZ => Temporal Dead Zone
+      // console.log(displayFruits(["apple", "orange", "mango", "banana"]));
+      // let displayFruits = function (fruits) {
+      //   // fruits = ["apple", "orange", "mango", "banana"]
+      //   // console.log(fruits);
+      //   return fruits;
+      // };
+
+      // callback function => passing one function into an another function
+      // as parameter
+
+      function displayName(fname, lname, callBackAge) {
+        // fname = "John"
+        // lname = "Jack"
+        // callBackAge = function (age) {
+        // console.log(`Age: ${age}`);
+        //  };
+        console.log(`Fullname: ${fname}, ${lname}`);
+        callBackAge(23);
       }
-      console.log(company);
-      displayFullname();
-      console.log(company);
+
+      let displayAge = function (age) {
+        console.log(`Age: ${age}`);
+      };
+
+      displayName("John", "Jack", displayAge);
+
+      // displayProducts(id, title, description, image, price, rating)
     </script>
   </body>
 </html>
