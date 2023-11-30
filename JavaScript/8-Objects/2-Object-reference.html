@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object Reference" />
+    <title>Object Reference</title>
+  </head>
+  <body>
+    <h2>Object Reference</h2>
+
+    <script>
+      // Object Reference
+      // Objects can be stored and copied as "reference"
+      // Primitive datatypes: string, boolean, bigInt, number
+      // stored and coped as "value"
+
+      let fruit = "apple";
+      let vegetable = fruit; // vegetable = "apple" // copy
+      //   console.log(fruit);
+      //   console.log(vegetable);
+      vegetable = "carrot";
+      fruit = "mango";
+      console.log(fruit);
+      console.log(vegetable);
+
+      let userOne = {
+        name: "John",
+        age: 23,
+        city: "Chennai",
+      };
+      let userTwo = {};
+      userTwo = userOne;
+      userOne.isAdmin = true;
+      userTwo.state = "Tamilnadu";
+      console.log(userOne);
+      console.log(userTwo);
+    </script>
+  </body>
+</html>

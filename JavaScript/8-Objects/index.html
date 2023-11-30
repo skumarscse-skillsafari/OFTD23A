@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Objects" />
+    <title>Objects</title>
+  </head>
+  <body>
+    <h2>Objects</h2>
+
+    <script>
+      // Objects
+      // key: value pair
+      // propertyName: propertyValue => property
+      // Object => Collection of properties
+      // Create
+      // 1. Object literal => {...}
+      // 2. new Object() => Constructor
+
+      // Syntax
+      /*
+        let varName = {
+            propertyName-1: propertyValue-1,
+            propertyName-2: propertyValue-2,
+                          :
+                          :
+            propertyName-N: propertyValue-N
+        }
+      */
+
+      let userDetails = {}; // create empty object
+      //   let userDetails = new Object();
+      // Add properties
+      // "." operator
+      // Syntax
+      // objName.newPropName = newPropValue
+      userDetails.fname = "John";
+      userDetails.lname = "Jack";
+      userDetails.age = 23;
+      console.log(userDetails);
+
+      // Update
+      // objectName.existingPropName = newValue
+      //   userDetails.age = 25;
+      //   console.log(userDetails);
+
+      // Access
+      // objectName.existingPropName => propertyValue
+      //   console.log(userDetails.fname);
+
+      // Adding multi-word propertName
+      // date of birth
+      // "date of birth" or dateOfBirth
+      //   userDetails["date of birth"] = "30-11-2020";
+      //   console.log(userDetails);
+      //   console.log(userDetails["date of birth"]);
+      //   console.log(userDetails["age"]);
+
+      // Property Existance check
+      // Syntax
+      // "propName" in objectName => boolean => true/false
+      //   console.log("fname" in userDetails);
+      //   console.log("city" in userDetails);
+
+      // delete
+      // Syntax
+      // delete objName.existingPropName
+      //   delete userDetails.age;
+      //   console.log(userDetails);
+
+      // Iteration
+      // for...in
+      // Syntax
+      /*
+        for(let varName in objName) {
+            // varName => "key"
+            // objName[varName] => objName["key"] => value
+        }
+      */
+      //   for (let key in userDetails) {
+      //     // console.log(key); // "fname"
+      //     // console.log(userDetails[key]); // userDetails["fname"] => "John"
+      //     console.log(`${key} => ${userDetails[key]}`);
+      //   }
+
+      // Object and function with short-hand notation
+      function createUserObj(id, name, age, work, city) {
+        let userObj = {
+          id,
+          name,
+          age,
+          organization: work,
+          city,
+          state: "Tamilnadu",
+        };
+        return userObj;
+      }
+      console.log(
+        createUserObj(10001, "John", 23, "Software Engineer", "Chennai")
+      );
+    </script>
+  </body>
+</html>
