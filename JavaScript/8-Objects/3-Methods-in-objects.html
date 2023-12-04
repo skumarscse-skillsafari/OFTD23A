@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Methods in Objects" />
+    <title>Methods in Objects</title>
+  </head>
+  <body>
+    <h2>Methods in Objects</h2>
+
+    <script>
+      // Methods in Objects
+      //   let userDetails = {
+      //     name: "John",
+      //     age: 23,
+      //     isAdmin: true,
+      //     address: {
+      //       city: "Chennai",
+      //       pincode: 600018,
+      //     },
+      //     hobbies: ["cricket", "football", "reading"],
+      //     displayFunction: function () {
+      //       console.log("Hello");
+      //     },
+      //   };
+
+      //   const displayMessage = function () {
+      //     console.log("Hello");
+      //   };
+
+      //   userDetails.displayFunction = displayMessage;
+
+      //   console.log(userDetails);
+      //   userDetails.displayFunction();
+
+      let userObj = {
+        name: "John",
+        age: 23,
+      };
+
+      let displayDetails = function () {
+        console.log(this.name);
+        console.log(this.age);
+      };
+
+      userObj.displayDetails = displayDetails;
+      console.log(userObj);
+      userObj.displayDetails();
+
+      let newUserObj = {
+        name: "Jack",
+        age: 30,
+      };
+      newUserObj.displayDetails = displayDetails;
+      console.log(newUserObj);
+      newUserObj.displayDetails();
+    </script>
+  </body>
+</html>

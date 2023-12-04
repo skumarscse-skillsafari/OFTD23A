@@ -21,20 +21,61 @@
       //   console.log(vegetable);
       vegetable = "carrot";
       fruit = "mango";
-      console.log(fruit);
-      console.log(vegetable);
+      // console.log(fruit);
+      // console.log(vegetable);
 
-      let userOne = {
-        name: "John",
-        age: 23,
-        city: "Chennai",
-      };
-      let userTwo = {};
-      userTwo = userOne;
-      userOne.isAdmin = true;
-      userTwo.state = "Tamilnadu";
-      console.log(userOne);
-      console.log(userTwo);
+      // let userOne = {
+      //   name: "John",
+      //   age: 23,
+      //   city: "Chennai",
+      // };
+      // let userTwo = {};
+      // userTwo = userOne;
+      // userOne.isAdmin = true;
+      // userTwo.state = "Tamilnadu";
+      // console.log(userOne);
+      // console.log(userTwo);
+
+      // Object.assign()
+      // Syntax
+      // Object.assign(destinationObj, sourceObj-1, sourceObj-2,..., sourceObj-N)
+      // let userOne = {
+      //   name: "John",
+      //   age: 23,
+      //   city: "Chennai",
+      // };
+      // let userTwo = {};
+      // Object.assign(userTwo, userOne, { state: "Tamilnadu" });
+      // userOne.isAdmin = false;
+      // userTwo.company = "SkillSafari";
+      // console.log(userOne);
+      // console.log(userTwo);
+
+      // structuredClone => shallow cloning
+      // let userObj = {
+      //   name: {
+      //     fname: "John",
+      //     lname: "Jack",
+      //   },
+      //   age: 23,
+      //   address: {
+      //     street: "XYZ street",
+      //     doorNo: 23,
+      //     city: "Coimbatore",
+      //     pincode: 641014,
+      //   },
+      // };
+      // let cloneUser = {};
+      // cloneUser = structuredClone(userObj);
+      // console.log(userObj);
+      // console.log(cloneUser);
+
+      // JSON.stringify()
+      // console.log(userObj);
+      // cloneUser = JSON.stringify(userObj); // copy
+      // cloneUser = JSON.parse(cloneUser); // string to object
+      // cloneUser.isAdmin = true; // add new property
+      // console.log(cloneUser);
     </script>
   </body>
 </html>

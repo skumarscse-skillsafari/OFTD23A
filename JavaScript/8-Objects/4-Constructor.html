@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Constructor" />
+    <title>Constructor</title>
+  </head>
+  <body>
+    <h2>Constructor</h2>
+
+    <script>
+      // Constructor
+      // It is one of the function
+      // Name of the function always starts with "Uppercase". Ex: CreateUser
+      // This type of functions can be initialized by using "new" keyword
+
+      // Initialize a Constructor function
+      // Syntax
+      // let varName = new ConstructorFunction(arg-1, arg-2,..., arg-N)
+
+      // Create
+      /*function ConstructorFunctionName(para-1, para-2, ..., para-N) {
+            // this
+      }
+      */
+
+      //   function createUser(id, name, age, city, isAdmin) {
+      //     let userObj = {};
+      //     userObj.id = id;
+      //     userObj.name = name;
+      //     userObj.age = age;
+      //     userObj.city = city;
+      //     userObj.isAdmin = isAdmin;
+      //     return userObj;
+      //   }
+      //   let userOne = createUser(1, "John", 23, "Chennai", true);
+      //   let userTwo = createUser(2, "Jack", 25, "Bangalore", false);
+      //   let userThree = createUser(3, "Mary", 20, "Coimbatore", true);
+      //   let userFour = createUser(4, "Prince", 18, "Trichy", false);
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   console.log(userThree);
+      //   console.log(userFour);
+
+      function CreateUser(id, name, age, city, isAdmin) {
+        // this = {}
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.isAdmin = isAdmin;
+        this.displayUser = function () {
+          console.log(
+            `${this.id}-${this.name}-${this.age}-${this.city}-${this.isAdmin}`
+          );
+        };
+        // return this; // {...}
+      }
+
+      let userOne = new CreateUser(1, "John", 23, "Chennai", true);
+      let userTwo = new CreateUser(2, "Jack", 25, "Bangalore", false);
+      let userThree = new CreateUser(3, "Mary", 20, "Coimbatore", true);
+      let userFour = new CreateUser(4, "Prince", 18, "Trichy", false);
+      console.log(userOne);
+      console.log(userTwo);
+      console.log(userThree);
+      console.log(userFour);
+      userOne.displayUser();
+      userTwo.displayUser();
+      userThree.displayUser();
+      userFour.displayUser();
+
+      //   function demoUser(name) {
+      //     return name;
+      //   }
+      //   let result = demoUser("John");
+      //   console.log(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Optional Chaining" />
+    <title>Optional Chaining</title>
+  </head>
+  <body>
+    <h2>Optional Chaining</h2>
+
+    <script>
+      // Optional Chaining
+      // ?.
+
+      let userDetails = {
+        address: {
+          details: {
+            doorNo: 12,
+            street: "XYZ street",
+            city: "Coimbatore",
+          },
+        },
+      };
+      console.log(userDetails);
+      console.log(userDetails?.address?.details?.city?.state?.pincode);
+      console.log(userDetails.address);
+      console.log(userDetails.address.details);
+      console.log(userDetails.address.details.city);
+    </script>
+  </body>
+</html>
