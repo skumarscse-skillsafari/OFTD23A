@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Strings" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <h2>Strings</h2>
+
+    <script>
+      // Strings
+      // Single quotes, Double quotes, Backticks
+      let fname = "John";
+      let lname = `Jack`;
+      console.log(`Fullname is ${fname}, ${lname}`); // Fullname is John, Jack
+
+      // Sequence of characters enclosed inside single, double, backticks
+      // characters => each and every letters in a string
+      // "John" => "J-o-h-n"
+      // "Hello123" => "H-e-l-l-o-1-2-3"
+
+      // Length
+      // console.log(fname.length);
+
+      // J-o-h-n
+      // 0-1-2-3
+
+      // Accessing char - [], charAt(), at(negativeindex)
+      // Square bracket
+      // Syntax
+      // str[pos]
+      // console.log(fname[0]);
+      // console.log(fname[1]);
+      // console.log(fname[2]);
+      // console.log(fname[3]);
+
+      // charAt()
+      // Syntax
+      // str.charAt(pos)
+      // console.log(fname.charAt(0));
+      // console.log(fname.charAt(1));
+      // console.log(fname.charAt(2));
+      // console.log(fname.charAt(3));
+
+      // Getting last character from a string
+      // console.log(fname[fname.length - 1]); // "n"
+
+      // at()
+      // J-o-h-n
+      // 0-1-2-3 => pos from left-right
+      // right-left => pos
+      // J  o   h   n
+      //-4 -3  -2  -1
+      // Syntax
+      // str.at(pos)
+      // console.log(fname.at(-1));
+      // console.log(fname.at(-2));
+
+      // Iteration - for...of
+      // for(...)
+      // initialization, condition, increment/decrement
+      // for (let i = 0; i < fname.length; i++) {
+      //   //         0; 3 < 4
+      //   console.log(fname[i]); // John
+      // }
+
+      // for...of
+      // Syntax
+      /*
+        for(let varName of string) {
+          console.log(varName)
+        }
+      */
+      // let message = "Hello, World";
+      // for (let char of message) {
+      //   //      "n"    "John"
+      //   console.log(char);
+      // }
+
+      // toUpperCase(), toLowerCase()
+      // Syntax
+      // str.toUpperCase() => UpperCase
+      // str.toLowerCase() => Lowercase
+
+      // console.log("skillsafari".toUpperCase());
+      // console.log("EdUkEyS".toLowerCase());
+      // Raam => raam
+      // let originalStr = "Raam";
+      // let cloneStr = originalStr.toLowerCase();
+      // console.log(originalStr);
+      // console.log(cloneStr);
+
+      // Strings are immutable
+      // Can't able to change or modify the character by using "pos"
+      // Raam => rAAm
+      // let name = prompt("Enter any string");
+      // name[0] = "r";
+      // name[1] = "A";
+      // name[2] = "A";
+      // name[3] = "m";
+      // let cloneStr =
+      //   name[0].toLowerCase() +
+      //   name[1].toUpperCase() +
+      //   name[2].toUpperCase() +
+      //   name[3];
+      // console.log(cloneStr);
+      // console.log(name);
+      // let cloneStr = "";
+      // for (let char of name.toLowerCase()) {
+      //   // char === "m"
+      //   if (char === "a" || char === "s") {
+      //     cloneStr = cloneStr + char.toUpperCase(); // RAA
+      //   } else {
+      //     cloneStr = cloneStr + char; // RAAm
+      //   }
+      // }
+      // console.log(cloneStr);
+
+      // skillsafari => SkillSAfAri
+
+      // Searching for substring - indexOf, lastIndexOf, includes, startsWith, endsWith
+      // Substring => one or more characters
+      // indexOf()
+      // Syntax
+      // str.indexOf(searchString: string, searchStartingPos?: number | undefined): number (starting index of searchString)
+      // let message = "Hello, World Hello";
+      // console.log(message.indexOf("W")); // 7
+      // console.log(message.indexOf("He")); // 0
+      // console.log(message.indexOf("old")); // -1
+      // console.log(message.indexOf("o")); // 4
+      // console.log(message.indexOf("o")); // 4
+      // console.log(message.indexOf("H", 1)); // -1
+      // console.log(message.indexOf("o", 5)); // 8
+      // let searchStr = "o";
+      // let pos = 0;
+      // while (true) {
+      //   let stringIndex = message.indexOf(searchStr, pos); // -1
+      //   if (stringIndex === -1) {
+      //     break;
+      //   }
+      //   console.log(`SearchString: ${searchStr} found in POS: ${stringIndex}`); // 4 8
+      //   pos = stringIndex + 1; // 8 + 1 => 9
+      // }
+
+      // console.log(message.indexOf("o"));
+      // console.log(message.lastIndexOf("o"));
+
+      // Getting a substring
+      // slice - positive index, negative index
+      // substring - positive index, reverse index
+      // substr
+      // trim
+      // repeat
+      // concat
+      // replace
+      // replaceAll
+      // Comparison
+      // localeCompare
+      // str.codePointAt(pos)
+      // String.fromCodePoint(code)
+    </script>
+  </body>
+</html>
