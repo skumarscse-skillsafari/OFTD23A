@@ -147,19 +147,96 @@
       // console.log(message.indexOf("o"));
       // console.log(message.lastIndexOf("o"));
 
+      // includes, startsWith, endsWith
+      // Syntax
+      // str.includes("subString", searchStartIndex)
+      // let message = "Hello, World";
+      // console.log(message.includes("Hello")); // true
+      // console.log(message.includes("Wo")); // true
+      // console.log(message.includes("Wo", 8)); // false
+      // console.log(message.includes("Wo", -8)); // true
+
+      // Syntax
+      // str.startsWith("subString", searchStartIndex)
+      // console.log(message.startsWith("Hello")); // true
+      // console.log(message.startsWith("World")); // false
+      // console.log(message.endsWith("World")); // true
+      // console.log(message.endsWith("Wo")); // false
+      // console.log(message.endsWith("d")); // true
+
       // Getting a substring
       // slice - positive index, negative index
+      // let message = "Hello, World";
+      // Syntax
+      // str.slice(startPos, endPos)
+      // returns a substring starts from "startPos" to "endPos-1"
+      // console.log(message.slice(0, 5)); // Hello
+      // console.log(message.slice(7)); // World
+      // console.log(message.slice(-5)); // World
+      // console.log(message.slice(-12, 5)); // Hello
+
       // substring - positive index, reverse index
+      // let message = "Hello, World";
+      // Syntax
+      // str.substring(startPos, endPos)
+      // negative index not allowed
+      // console.log(message.substring(0, 5)); // Hello
+      // console.log(message.substring(5, 0)); // Hello
+
       // substr
+      // Syntax
+      // str.substr(startIndex, subStringCharCount)
+      // console.log(message.substr(0, 4));
+      // console.log(message.substr(6, 4));
+      // console.log(message.substr(-5, 4));
+
       // trim
+      // let name = "          John, Jack        ";
+      // console.log(name);
+      // console.log(name.trim());
+      // console.log(name.trimStart());
+      // console.log(name.trimEnd());
+
       // repeat
+      // let name = "John";
+      // Syntax
+      // str.repeat(repeatCount)
+      // console.log(name.repeat(2));
+
       // concat
+      // Syntax
+      // str.concat(str-1, str-2, str-3)
+      // let str = "John";
+      // let newStr = str.concat(" Jack", " Mary", " Prince");
+      // console.log(newStr);
+
       // replace
-      // replaceAll
+      // let message = "Hello, World";
+      // console.log(message.replace("o", "O"));
+      // // replaceAll
+      // console.log(message.replaceAll("o", "O"));
+
       // Comparison
+      // https://www.asciitable.com/
+      // console.log("A" > "a"); // 65 > 97 => false
+      // console.log("Hello" > "World"); // 72 > 87 => false
+      // console.log("AAB" < "AAC"); // 66 > 67 => true
+      // console.log("AAA" < "AA"); // false
+      // console.log("AA" < "AA"); // false
+      // console.log("AA" <= "AA"); // true
+
       // localeCompare
+
       // str.codePointAt(pos)
+      // let name = "ABC";
+      // console.log(name.codePointAt(0)); // 65
+      // console.log(name.codePointAt(1)); // 66
+      // console.log(name.codePointAt(2)); // 67
+      // for (let i = 0; i < name.length; i++) {
+      //   console.log(name.codePointAt(i));
+      // }
       // String.fromCodePoint(code)
+      // console.log(String.fromCodePoint(65));
     </script>
   </body>
 </html>
