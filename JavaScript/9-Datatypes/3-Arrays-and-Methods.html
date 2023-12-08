@@ -11,11 +11,94 @@
 
     <script>
       // Arrays and Array Methods
+      // Non-primitive datatype
+      // morethan one value can be stored in one variable
+      // values stored in the array are known as "elements"
+      // "elements" are stored in sequential order
+      // Each and every "elements" in the array can be accessed by using "index"
       // Create - [] and new Array(), length
+      // Syntax
+      // [ele-1, ele-2,..., ele-N]
+      // let fruits = ["apple", "mango", "orange"];
+      // console.log(fruits);
+      // console.log(fruits.length);
+
+      // let fruits = new Array();
+      // fruits[0] = "apple";
+      // fruits[1] = "orange";
+      // fruits[2] = "mango";
+      // fruits[3] = "banana";
+      // let fruits = new Array("apple", "orange");
+      // console.log(fruits);
+
       // Access, at, update, mix array
+      // console.log(fruits[2]);
+      // fruits[2] = "pineapple";
+      // fruits[4] = "orange";
+      // console.log(fruits);
+      // console.log(fruits.at(-1));
+      // console.log(fruits.at(1));
+      // console.log(fruits[-1]);
+
+      // let mixArray = [
+      //   1,
+      //   "string",
+      //   true,
+      //   undefined,
+      //   { name: "John" },
+      //   [2, 3, 4],
+      //   function () {
+      //     console.log("Hello");
+      //   },
+      // ];
+      // console.log(mixArray);
+      // console.log(mixArray[4].name);
+      // mixArray[6]();
+
       // pop/push and shift/unshift
+      // Element => Insert and Remove
+      // pop() => Remove last element from the array
+      // push() => Add element(s) at the end of array
+      let names = ["John", "Jack", "Prince", "Robert"];
+      console.log(names);
+      // console.log(names.pop());
+      // names.pop();
+      // console.log(names);
+      // console.log(names.push("Raam", "Raaj", "Jack"));
+      // console.log(names);
+
+      // shift() => Remove first element from the array
+      // unshift() => Add element(s) at the beginning of array
+      // console.log(names.shift());
+      // console.log(names.shift());
+      // console.log(names.unshift("Raam", "Raaj"));
+      // console.log(names);
+
       // Iteration - for, for...of, for...in
+      // for (let i = 0; i < names.length; i++) {
+      //   console.log(names[i]);
+      // }
+
+      // for (let name of names) {
+      //   console.log(name);
+      // }
+
+      // for (let name in names) {
+      //   console.log(names[name]);
+      // }
+
       // Multidimensional array
+      // Array inside an array
+      let num = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      console.log(num);
+      console.log(num[0]);
+      console.log(num[0][1]); // 2
+      console.log(num[1][1]); // 5
+
       // splice - insert, replace, delete
       // slice
       // concat
