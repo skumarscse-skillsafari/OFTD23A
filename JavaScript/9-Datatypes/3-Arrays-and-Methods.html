@@ -59,8 +59,8 @@
       // Element => Insert and Remove
       // pop() => Remove last element from the array
       // push() => Add element(s) at the end of array
-      let names = ["John", "Jack", "Prince", "Robert"];
-      console.log(names);
+      // let names = ["John", "Jack", "Prince", "Robert"];
+      // console.log(names);
       // console.log(names.pop());
       // names.pop();
       // console.log(names);
@@ -89,20 +89,115 @@
 
       // Multidimensional array
       // Array inside an array
-      let num = [
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9],
-      ];
-      console.log(num);
-      console.log(num[0]);
-      console.log(num[0][1]); // 2
-      console.log(num[1][1]); // 5
+      // let num = [
+      //   [1, 2, 3],
+      //   [4, 5, 6],
+      //   [7, 8, 9],
+      // ];
+      // console.log(num);
+      // console.log(num[0]);
+      // console.log(num[0][1]); // 2
+      // console.log(num[1][1]); // 5
 
       // splice - insert, replace, delete
+      let names = ["John", "Jack", "Prince", "Robert"];
+      // Supports posive and negative index
+      // Syntax
+      // str.splice(startIndex, deleteCount, newEle-1, newEle-2,..., newEle-N)
+      // delete
+      // names.splice(-1, 1);
+      // console.log(names);
+
+      // replace/update
+      // names.splice(1, 2, "Raam", "Raaj");
+      // console.log(names);
+
+      // insert
+      // names.splice(2, 0, "Raam");
+      // console.log(names);
+
       // slice
+      // Syntax
+      // arr.slice(startIndex, endIndex)
+      // return new array starts from "startIndex" to "endIndex-1"
+      // console.log(names.slice(1, 4));
+      // console.log(names.slice(-3, 2));
+      // console.log(names);
+
       // concat
+      // let numOne = [1, 2, 3];
+      // let numTwo = [4, 5, 6];
+      // let numThree = [7, 8, 9];
+      // let newArr = [numOne, numTwo, numThree];
+      // // console.log(numOne.concat(numTwo, numThree));
+      // console.log(newArr);
+
       // Iterate - forEach
+      // Syntax
+      /*
+        arr.forEach(function(ele, index, array) {
+            // logic
+        })
+      */
+      // names.forEach(function (ele, index, array) {
+      //   // console.log(ele, index, array);
+      //   console.log(
+      //     `Element => ${ele} : Index => ${index} : Array => ${array}`
+      //   );
+      // });
+
+      let studentsDetails = [
+        { id: 10001, name: "John", dept: "CSE", age: 20 },
+        { id: 10002, name: "Ezhil", dept: "IT", age: 19 },
+        { id: 10003, name: "Arun", dept: "EEE", age: 21 },
+        { id: 10004, name: "Inbha", dept: "ECE", age: 19 },
+        { id: 10005, name: "Robert", dept: "CSE", age: 22 },
+      ];
+      // let newArr = [];
+      // studentsDetails.forEach(function (student) {
+      //   // { id: 10001, name: "John", dept: "CSE", age: 20 }
+      //   if (student.age > 20) {
+      //     newArr.push(student);
+      //   }
+      // });
+      // console.log(newArr);
+
+      // age > 20 => college: "SkillSafari"
+      // age < 20 => college: "EduKeys"
+      // let newStudents = [];
+      // studentsDetails.forEach(function (student) {
+      //   if (student.age > 20) {
+      //     newStudents.push(Object.assign(student, { college: "SkillSafari" }));
+      //   } else {
+      //     newStudents.push(Object.assign(student, { college: "EduKeys" }));
+      //   }
+      // });
+      // console.log(newStudents);
+
+      // Filter the student whose name has the char "o"
+      // let newStudents = [];
+      // studentsDetails.forEach(function (student) {
+      //   if (student.name.includes("o")) {
+      //     newStudents.push(student);
+      //   }
+      // });
+      // console.log(newStudents);
+
+      // Filter the student whose name starts with "vowels"
+      // let newStudents = [];
+      // studentsDetails.forEach(function (student) {
+      //   if (
+      //     student.name.toLowerCase().startsWith("a") ||
+      //     student.name.toLowerCase().startsWith("e") ||
+      //     student.name.toLowerCase().startsWith("i") ||
+      //     student.name.toLowerCase().startsWith("o") ||
+      //     student.name.toLowerCase().startsWith("u")
+      //   ) {
+      //     newStudents.push(student);
+      //   }
+      // });
+      // console.log(newStudents);
+
       // Search - indexOf, lastIndexOf, includes
       // Find - find, findIndex, findLastIndex
       // filter
