@@ -198,9 +198,88 @@
       // });
       // console.log(newStudents);
 
+      // Find the student age > 20
+
+      // for (let i = 0; i < studentsDetails.length; i++) {
+      //   if (studentsDetails[i].age > 20) {
+      //     console.log(studentsDetails[i]);
+      //     break;
+      //   }
+      // }
+
       // Search - indexOf, lastIndexOf, includes
+      // Syntax
+      // arr.indexOf(searchElement, startIndex)
+      // index of the element with the name starts with "A"
+      let fruits = ["apple", "orange", "mango", "banana", "mango"];
+      // Find the index of the element "mango"
+      // let result = fruits.indexOf("mango", 3);
+      // let result = fruits.lastIndexOf("mango");
+      // console.log(result);
+
+      // console.log(fruits.includes("mango"));
+      // console.log(fruits.includes("pineapple"));
+
       // Find - find, findIndex, findLastIndex
+      // Syntax
+      /*
+        arr.find(function (element, index, array) {
+          // condition
+        }) // return single-value || undefined
+      */
+      // fruitsArr => "mango"
+      // let result = fruits.find((fruit) => {
+      //   if (fruit === "pineapple") {
+      //     return fruit;
+      //   }
+      // });
+
+      // let result = fruits.find((fruit) => fruit === "mango");
+      // console.log(result);
+
+      // Find the student name startWith "A"
+      // let result = studentsDetails.find((student) => {
+      //   if (student.name.startsWith("A")) {
+      //     return student;
+      //   }
+      // });
+      // console.log(result);
+
+      // let result = studentsDetails.find((student) =>
+      //   student.name.startsWith("A")
+      // );
+      // console.log(result);
+
+      // findIndex()
+      // Find the index of the element name startsWith "A"
+      // let result = studentsDetails.findIndex(function (student) {
+      //   if (student.name.startsWith("A")) {
+      //     return student;
+      //   }
+      // });
+      // console.log(result);
+
+      // let result = studentsDetails.findIndex((student) =>
+      //   student.name.startsWith("A")
+      // );
+      // console.log(result);
+
       // filter
+      // Syntax
+      /*
+        arr.filter(function (element, index, array) {
+          // condition
+        }) // return array of elements || []
+      */
+
+      // let result = studentsDetails.find((student) => student.age > 20);
+      // console.log(result);
+
+      // let result = studentsDetails.filter((student) => student.age > 20);
+      // console.log(result);
+
+      //
+
       // Transform - map, sort - a-b, return 1, -1, a.localeCompare(b)
       // reverse, split and join
       // reduce, reduceRight
