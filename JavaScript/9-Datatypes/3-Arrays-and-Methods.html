@@ -278,10 +278,113 @@
       // let result = studentsDetails.filter((student) => student.age > 20);
       // console.log(result);
 
-      //
-
       // Transform - map, sort - a-b, return 1, -1, a.localeCompare(b)
+      // map
+      // Syntax
+      /*
+        arr.map(function (element, index, array) {
+          // logic
+        }) // input element length === output element length 
+      */
+      // let num = [1, 2, 3, 4, 5];
+      // output = [2, 4, 6, 8, 10]
+      // let newArr = [];
+      // num.forEach((n) => {
+      //   newArr.push(n * 2);
+      // });
+      // let newArray = num.map(function (n) {
+      //   return n * 2;
+      // });
+      // console.log(num);
+      // console.log(newArray);
+
+      // console.log(fruits);
+      // console.log(fruits.map((fruit) => fruit.length));
+
+      // age > 20 => college: "SkillSafari"
+      // age < 20 => college: "EduKeys"
+      // console.log(studentsDetails);
+      // let newArr = studentsDetails.map((student) => {
+      //   if (student.age > 20) {
+      //     // return {
+      //     //   id: student.id,
+      //     //   name: student.name,
+      //     //   age: student.age,
+      //     //   dept: student.dept,
+      //     //   college: "SkillSafari",
+      //     // };
+      //     return Object.assign(student, { college: "SkillSafari" });
+      //   } else {
+      //     // return {
+      //     //   id: student.id,
+      //     //   name: student.name,
+      //     //   age: student.age,
+      //     //   dept: student.dept,
+      //     //   college: "EduKeys",
+      //     // };
+      //     return Object.assign(student, { college: "EduKeys" });
+      //   }
+      // });
+      // console.log(newArr);
+
+      // Filter the element age > 20 and add new property "college: skillsafari"
+      // let filteredEle = studentsDetails.filter((student) => student.age > 20);
+      // console.log(filteredEle);
+      // let newArr = filteredEle.map((student) => {
+      //   return Object.assign(student, { college: "SkillSafari" });
+      // });
+
+      // Chaining method
+      // let newArr = studentsDetails
+      //   .filter((student) => student.age > 20)
+      //   .map((student) => {
+      //     return Object.assign(student, { collage: "SkillSafari" });
+      //   });
+      // console.log(newArr);
+
+      // sort
+      // let num = [2, 3, 1, 0, 12, -1];
+      // Syntax
+      // sort()
+      /*
+        arr.sort(function (a, b) {
+          return a - b
+          return b - a
+        })
+      */
+      // console.log(num);
+      // console.log(
+      //   num.sort(function (a, b) {
+      //     // return a - b;
+      //     return b - a;
+      //   })
+      // );
+      // console.log(num.sort((a, b) => a - b));
+
+      // console.log(fruits);
+
+      // strings
+      // console.log(fruits.sort((a, b) => a - b));
+      // console.log(
+      //   fruits.sort((a, b) => {
+      //     if (a > b) {
+      //       return 1;
+      //     }
+      //     if (a < b) {
+      //       return -1;
+      //     }
+      //     if (a === b) {
+      //       return 0;
+      //     }
+      //   })
+      // );
+
+      // console.log(fruits.sort((a, b) => a.localeCompare(b)));
+      // console.log(fruits.sort((a, b) => b.localeCompare(a)));
+
       // reverse, split and join
+      // reverse()
+
       // reduce, reduceRight
       // some, every
       // fill(value, start, end)
