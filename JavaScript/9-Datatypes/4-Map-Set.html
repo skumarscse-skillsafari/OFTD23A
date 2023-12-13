@@ -11,18 +11,98 @@
 
     <script>
       // Map and Set
+      // Map => Datastructure for storing data as key: value pair similar like object
+      // Object => Key must be of "string"
+      // Map => Key can be any datatype
       // Map
       // new Map()
+      // Create a Map
+      // Syntax
+      // let varName = new Map()
+
+      let studentsMarkMap = new Map([
+        ["John", 90],
+        ["Jack", 89],
+        ["Mary", 98],
+        ["Robert", 100],
+      ]);
+      // console.log(studentsMarkMap);
+
+      // Adding elements
       // set() and set() chaining, "[]" method
-      // get()
-      // has()
+      // Syntax
+      // map.set("key", "value")
+      // studentsMarkMap.set("John", 90);
+      // studentsMarkMap.set("Jack", 80);
+      // studentsMarkMap.set("John", 90).set("Jack", 80).set("Mary", 86);
+
+      // console.log(studentsMarkMap);
+      // get() => Accessing Map value using "Key"
+      // console.log(studentsMarkMap.get("John"));
+      // console.log(studentsMarkMap.get("Raam"));
+
+      // has() => boolean
+      // console.log(studentsMarkMap.has("Jack"));
+      // console.log(studentsMarkMap.has("Raam"));
+
       // delete()
+      // studentsMarkMap.delete("Mary");
+      // console.log(studentsMarkMap);
+
       // clear()
+      // studentsMarkMap.clear();
+      // console.log(studentsMarkMap);
+
       // size
+      // console.log(studentsMarkMap.size);
       // object as keys
+      // let newMap = new Map();
+      // let john = { name: "John" };
+      // let jack = { name: "Jack" };
+      // let robert = { name: "Robert" };
+
+      // newMap
+      //   .set(john, "John details")
+      //   .set(jack, "Jack details")
+      //   .set(robert, "Robert details");
+      // console.log(newMap);
       // Iteration - for...of - keys(), values(), entries(), forEach()
+      // console.log(studentsMarkMap);
+      // let mapKeys = studentsMarkMap.keys();
+      // console.log(mapKeys);
+      // for (const key of studentsMarkMap.keys()) {
+      //   console.log(key);
+      // }
+      // let mapValues = studentsMarkMap.values();
+      // console.log(mapValues);
+      // for (const value of studentsMarkMap.values()) {
+      //   console.log(value);
+      // }
+
+      // console.log(studentsMarkMap.entries());
+      // for (const [key, value] of studentsMarkMap.entries()) {
+      //   console.log(key, value);
+      // }
+
       // Object.entries() - Object to Map
+      let studentsObj = {
+        name: "John",
+        age: 23,
+        city: "Chennai",
+      };
+      console.log(studentsObj);
+      let studentsMap = Object.entries(studentsObj);
+      console.log(studentsMap);
+
       // Object.fromEntries() - Map to Object
+      let fruitsMap = new Map([
+        ["apple", 23],
+        ["orange", 12],
+        ["mango", 30],
+      ]);
+      console.log(fruitsMap);
+      let fruitsObj = Object.fromEntries(fruitsMap);
+      console.log(fruitsObj);
 
       // Set
       // new Set()
