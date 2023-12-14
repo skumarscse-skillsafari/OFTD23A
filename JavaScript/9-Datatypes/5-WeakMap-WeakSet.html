@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="WeakMap and WeakSet" />
+    <title>WeakMap and WeakSet</title>
+  </head>
+  <body>
+    <h2>WeakMap and WeakSet</h2>
+
+    <script>
+      // WeakMap and WeakSet
+      // One of the datastructure collection, used to store weak objects
+      // Map and Set => Can have key and value as any datatypes
+      // WekMap and WeakSet => Can have only objects as key and value
+
+      // WeakMap
+      // new WeakMap()
+
+      //   let weakMap = new WeakMap();
+      //   console.log(weakMap);
+      let john = { name: "John", age: 23 };
+      let jack = { name: "Jack", age: 22 };
+      let mary = { name: "Mary", age: 20 };
+      let raam = { name: "Raam", age: 18 };
+
+      //   weakMap.set(john, "John details");
+      //   weakMap.set(jack, "Jack details");
+      //   weakMap.set(mary, "Mary details");
+
+      //   console.log(weakMap);
+      //   console.log(weakMap.get(john));
+      //   console.log(weakMap.has(raam));
+      //   weakMap.delete(john);
+
+      let weakSet = new WeakSet();
+      console.log(weakSet);
+
+      weakSet.add(john);
+      weakSet.add(jack);
+      weakSet.add(mary);
+
+      console.log(weakSet);
+      console.log(weakSet.has(john));
+      console.log(weakSet.has(raam));
+      //   weakSet.delete(jack);
+      jack = null;
+      console.log(weakSet);
+
+      let set = new Set();
+      set.add(john);
+      set.add(jack);
+      set.add(mary);
+      // jack = null;
+      console.log(set);
+    </script>
+  </body>
+</html>

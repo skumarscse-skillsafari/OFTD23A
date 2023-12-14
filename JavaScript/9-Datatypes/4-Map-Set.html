@@ -20,12 +20,12 @@
       // Syntax
       // let varName = new Map()
 
-      let studentsMarkMap = new Map([
-        ["John", 90],
-        ["Jack", 89],
-        ["Mary", 98],
-        ["Robert", 100],
-      ]);
+      // let studentsMarkMap = new Map([
+      //   ["John", 90],
+      //   ["Jack", 89],
+      //   ["Mary", 98],
+      //   ["Robert", 100],
+      // ]);
       // console.log(studentsMarkMap);
 
       // Adding elements
@@ -85,33 +85,112 @@
       // }
 
       // Object.entries() - Object to Map
-      let studentsObj = {
-        name: "John",
-        age: 23,
-        city: "Chennai",
-      };
-      console.log(studentsObj);
-      let studentsMap = Object.entries(studentsObj);
-      console.log(studentsMap);
+      // let studentsObj = {
+      //   name: "John",
+      //   age: 23,
+      //   city: "Chennai",
+      // };
+      // console.log(studentsObj);
+      // let studentsMap = new Map(Object.entries(studentsObj));
+      // console.log(studentsMap);
 
       // Object.fromEntries() - Map to Object
-      let fruitsMap = new Map([
-        ["apple", 23],
-        ["orange", 12],
-        ["mango", 30],
-      ]);
-      console.log(fruitsMap);
-      let fruitsObj = Object.fromEntries(fruitsMap);
-      console.log(fruitsObj);
+      // let fruitsMap = new Map([
+      //   ["apple", 23],
+      //   ["orange", 12],
+      //   ["mango", 30],
+      // ]);
+      // console.log(fruitsMap);
+      // let fruitsObj = Object.fromEntries(fruitsMap);
+      // console.log(fruitsObj);
 
-      // Set
+      // let markListObj = {
+      //   english: 50,
+      //   maths: 23,
+      //   physics: 45,
+      //   chemistry: 40,
+      // };
+      // console.log(markListObj);
+      // console.log(Object.entries(markListObj));
+      // // Object to Map => Object.entries()
+      // let newObj = Object.entries(markListObj).map((ele) => [
+      //   // prop => ["english", 50]
+      //   ele[0],
+      //   ele[1] * 2,
+      // ]);
+      // console.log(Object.fromEntries(newObj));
+
+      // studentsMarkMap.forEach((val, key, map) => {
+      //   console.log(key, val, map);
+      // });
+
+      // Set => Stores only the value and can be of any datatypes
+      // Set does not allows duplicate
+      // Create
       // new Set()
+      // Syntax
+      // let varName = new Set()
+      // let studentsSet = new Set();
+      // console.log(studentsSet);
+
+      // Adding element
       // add()
+      // Syntax
+      // set.add("value")
+      // studentsSet.add("John");
+      // studentsSet.add("John");
+      // studentsSet.add("Jack");
+      // studentsSet.add("Jack");
+      // studentsSet.add("Mary");
+      // studentsSet.add("Mary");
+
+      // console.log(studentsSet);
+
       // delete()
+      // studentsSet.delete("Jack");
+      // console.log(studentsSet);
+
       // has()
+      // console.log(studentsSet.has("John"));
+      // console.log(studentsSet.has("Jack"));
       // clear()
+      // studentsSet.clear();
+      // console.log(studentsSet);
+
       // size
+      // console.log(studentsSet.size);
+
       // Iteration - for...of, forEach, keys(), values(), entries()
+      // for (const key of studentsSet.keys()) {
+      //   console.log(key);
+      // }
+
+      // for (const value of studentsSet.values()) {
+      //   console.log(value);
+      // }
+
+      // for (const [key, value] of studentsSet.entries()) {
+      //   console.log(key, value);
+      // }
+
+      // studentsSet.forEach((val, index, set) => {
+      //   console.log(val, index, set);
+      // });
+
+      let num = [1, 2, 3, 1, 2, 3, 4, 5];
+      console.log(num);
+      // let newArr = []; // [1, 2, 3, 4, 5]
+      // for (let i = 0; i < num.length; i++) {
+      //   if (!newArr.includes(num[i])) {
+      //     // num[8] => 5
+      //     newArr.push(num[i]);
+      //   }
+      // }
+      // console.log(newArr);
+      // let newArr = [...new Set(num)];
+      // let set = new Set([1, 2, 3, 4, 4, 5]);
+      // console.log(set);
+      // console.log(newArr);
     </script>
   </body>
 </html>
