@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Destructuring Assignment" />
+    <title>Destructuring Assignment</title>
+  </head>
+  <body>
+    <h2>Destructuring Assignment</h2>
+
+    <script>
+      // Destructuring Assignment
+      // Unpacking the elements or properties from array and object
+      // Array and Object
+      // Array destructuring
+      //   let usersArr = ["John", "Jack", "Mary", "Robert"];
+      //   console.log(usersArr[0]);
+      //   console.log(usersArr[1]);
+      //   console.log(usersArr[2]);
+      //   console.log(usersArr[3]);
+
+      // Syntax
+      // LHS = RHS
+      // RHS => array values
+      // LHS => array access variables
+      // let [var-1, var-2, ..., var-N] = [ele-1, ele-2,..., ele-N]
+      // var-1 => ele-1,
+      // var-2 => ele-2,
+      // var-N => ele-N
+
+      //   let [userOne, userTwo, userThree, userFour] = usersArr;
+      // userOne => "John"
+      // userTwo => "Jack"
+      // userThree => "Mary"
+      // userFour => "Robert"
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   console.log(userThree);
+      //   console.log(userFour);
+
+      // Destructure array-like elements
+      // Set
+      //   let [numOne, numTwo, numThree] = new Set([1, 2, 3]);
+      //   console.log(numOne);
+      //   console.log(numTwo);
+      //   console.log(numThree);
+
+      //   let [firstName, lastName] = "John Jack".split(" "); // ["John", "Jack"]
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   let userAge = 23;
+      //   let admin = true;
+      //   let [age, isAdmin] = [userAge, admin];
+      //   console.log(age);
+      //   console.log(isAdmin);
+
+      // skip assigning variables
+      //   let usersArr = ["John", "Jack", "Mary", "Robert"];
+      //   let [userOne, userTwo, userThree, userFour, userFive] = usersArr;
+      //   let [userOne, userTwo, , userFour] = usersArr;
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   console.log(userThree);
+      //   console.log(userFour);
+      //   console.log(userFive);
+
+      // Destructuring Map
+      //   let userMap = new Map([
+      //     ["John", 23],
+      //     ["Jack", 22],
+      //     ["Mary", 20],
+      //     ["Robert", 18],
+      //   ]);
+      //   console.log(userMap);
+      //   console.log(userMap.entries());
+      //   for (const [key, value] of userMap.entries()) {
+      // const [key, value] = ["Jack", 22]
+      // console.log(key, value);
+      //}
+
+      // Destructuring Object properties
+      //   let userDetails = {
+      //     name: "John",
+      //     age: 23,
+      //     city: "Chennai",
+      //     isAdmin: true,
+      //   };
+      //   console.log(Object.entries(userDetails));
+      //   for (const [key, value] of Object.entries(userDetails)) {
+      //     // const [key, value] = ["age", 23]
+      //     console.log(key, value);
+      //   }
+
+      // Default values
+      // let [varName = "defaultValue"] = []
+      //   let [firstName, lastName = "Robert"] = ["John", "Jack"];
+      //   console.log(firstName);
+      //   console.log(lastName);
+      //   let [firstName = prompt("Enter username")] = [];
+      //   console.log(firstName);
+
+      //   const [charOne, charTwo, charThree, charFour] = "John".split(""); // ["J", "o", "h", "n"]
+      //   console.log(charOne);
+      //   console.log(charTwo);
+      //   console.log(charThree);
+      //   console.log(charFour);
+
+      // rest variable
+      //   let [userOne, userTwo, ...restNames] = [
+      //     "John",
+      //     "Jack",
+      //     "Mary",
+      //     "Robert",
+      //     "Prince",
+      //   ];
+      // userOne => "John",
+      // userTwo => "Jack"
+      // restNames => ["Mary", "Robert", "Prince"]
+      //   console.log(userOne);
+      //   console.log(userTwo);
+      //   console.log(restNames);
+      //   const [userThree, userFour, userFive] = restNames;
+      //   console.log(userThree);
+      //   console.log(userFour);
+      //   console.log(userFive);
+
+      //   let [charOne, charTwo, charThree, charFour] = "John";
+      //   console.log(charOne);
+      //   console.log(charTwo);
+      //   console.log(charThree);
+      //   console.log(charFour);
+
+      // array destructuring in function
+      //   function userDetails([userOne, userTwo, userThree, userFour]) {
+      //     console.log(userOne);
+      //     console.log(userTwo);
+      //     console.log(userThree);
+      //     console.log(userFour);
+      //   }
+      //   let userNames = ["John", "Jack", "Mary", "Robert"];
+      //   userDetails(userNames);
+
+      // [userOne, userTwo, userThree, userFour] = ["John", "Jack", "Mary", "Robert"]
+    </script>
+  </body>
+</html>

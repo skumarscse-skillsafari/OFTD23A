@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Object methods" />
+    <title>Object methods</title>
+  </head>
+  <body>
+    <h2>Object methods</h2>
+
+    <script>
+      // Object methods
+      // Object => keys and values => iteratate
+      // Map and Set => keys(), values(), entries()
+
+      // 1. Object.keys() => return iteratable object keys
+      // 2. Object.values() => return iteratable object values
+      // 3. Object.entries() => return iteratable keys and values
+
+      let userDetails = {
+        name: "John",
+        age: 23,
+        city: "Chennai",
+        isAdmin: true,
+      };
+
+      let objectKeys = Object.keys(userDetails);
+      //   console.log(objectKeys);
+
+      let objectValues = Object.values(userDetails);
+      //   console.log(objectValues);
+
+      // Object.entries() => can iterate key and value
+      // convert object to multi-dimentional array
+      console.log(userDetails);
+
+      let objectKeyValue = Object.entries(userDetails);
+      console.log(objectKeyValue);
+
+      // Object.fromEntries() => multi-dimentional array to object
+      console.log(Object.fromEntries(objectKeyValue));
+    </script>
+  </body>
+</html>
