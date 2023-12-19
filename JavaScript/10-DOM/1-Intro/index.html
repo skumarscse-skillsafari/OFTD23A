@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="DOM" />
+    <title>DOM</title>
+  </head>
+  <body>
+    <h2>DOM</h2>
+    <h2 id="head">Heading - 2</h2>
+    <h3 class="special">Heading - 3</h3>
+    <p class="special">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos,
+      explicabo?
+    </p>
+    <p>This is paragraph</p>
+    <form action="">
+      <input type="radio" name="options" id="" value="English" />English
+      <input type="radio" name="options" id="" value="Maths" />Maths
+      <input type="radio" name="options" id="" value="Physics" />Physics
+      <input type="radio" name="options" id="" value="Chemistry" />Chemistry
+    </form>
+
+    <script>
+      // DOM => Document Object Model
+      // document object
+      // window => document => head and body
+      //   console.log(window);
+      //   console.log(document);
+
+      // Selecting html element
+      // document.getElementsByName()
+      // documnet.getElementsByTagName()
+      // document.getElementsByClassName()
+      // document.getElementById()
+      // document.querySelector()
+      // document.querySelectorAll()
+
+      // documnet.getElementsByTagName() => return HTMLCollection
+      //   const h2 = document.getElementsByTagName("h2");
+      //   h2[0].textContent = "New DOM";
+      //   console.log(h2);
+
+      //   const para = document.getElementsByTagName("p");
+      //   console.log(para);
+      // document.getElementsByClassName() => HTMLCOllection
+      //   const special = document.getElementsByClassName("special");
+      //   console.log(special[0].textContent);
+      //   console.log(special[1].textContent);
+      //   for (const ele of special) {
+      //     ele.style.backgroundColor = "green";
+      //     ele.style.color = "white";
+      //     ele.style.padding = "20px";
+      //   }
+
+      // document.getElementById() => HTMLElement
+      //   const head = document.getElementById("head");
+      //   console.log(head);
+
+      // document.getElementsByName() => NodeListOf<HTMLElement>
+      //   const options = document.getElementsByName("options");
+      //   console.log(options);
+      //   options.forEach((option) => {
+      //     console.log(option.value);
+      //   });
+    </script>
+  </body>
+</html>

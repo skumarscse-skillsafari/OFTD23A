@@ -142,6 +142,120 @@
       //   userDetails(userNames);
 
       // [userOne, userTwo, userThree, userFour] = ["John", "Jack", "Mary", "Robert"]
+
+      // Object destructuring
+      // let userDetails = {
+      //   name: "John",
+      //   age: 23,
+      //   isAdmin: false,
+      //   city: "Chennai",
+      //   state: "Karnataka",
+      // };
+      // console.log(userDetails);
+      // console.log(userDetails.age);
+      // console.log(userDetails["city"]);
+
+      // Syntax
+      // LHS = RHS
+      /* let {propName-1, propName-2, ..., propName-N} =
+                                    { propName-1: propVal-1,
+                                      propName-2: propVal-2,...,
+                                      propName-N : propValue-N }
+      */
+      // let { name, age, isAdmin, city } = userDetails;
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+      // console.log(isAdmin);
+
+      // order of properties in left-hand side
+      // let { name, city, age, isAdmin } = userDetails;
+      // console.log(name);
+      // console.log(age);
+      // console.log(city);
+      // console.log(isAdmin);
+
+      // Alias name
+      // let { name: username, city: c, age: a, isAdmin: i } = userDetails;
+      // console.log(username);
+      // console.log(c);
+      // console.log(a);
+      // console.log(i);
+
+      // default values
+      // let { name, city, age, isAdmin, state = "Tamilnadu" } = userDetails;
+      // console.log(userDetails);
+      // console.log(state);
+
+      // rest variable
+      // let { name, age, ...restProps } = userDetails;
+      // console.log(name);
+      // console.log(age);
+      // console.log(restProps);
+      // let { state, city, isAdmin } = restProps;
+      // console.log(state);
+      // console.log(city);
+      // console.log(isAdmin);
+
+      // Nested objects
+      let userDetails = {
+        name: "John",
+        age: 23,
+        isAdmin: false,
+        address: {
+          city: "Chennai",
+          state: "Karnataka",
+        },
+        hobbies: ["cricket", "football"],
+      };
+      // let {
+      //   name,
+      //   age,
+      //   isAdmin,
+      //   address: { city, state },
+      //   hobbies: [hobbyOne, hobbyTwo],
+      // } = userDetails;
+      // console.log(name);
+      // console.log(age);
+      // console.log(isAdmin);
+      // console.log(city);
+      // console.log(state);
+      // console.log(hobbyOne);
+      // console.log(hobbyTwo);
+
+      // function userDetailsFun({
+      //   name,
+      //   age,
+      //   isAdmin,
+      //   address: { city, state },
+      //   hobbies: [hobbyOne, hobbyTwo],
+      // }) {
+      //   console.log(name);
+      //   console.log(age);
+      //   console.log(isAdmin);
+      //   console.log(city);
+      //   console.log(state);
+      //   console.log(hobbyOne);
+      //   console.log(hobbyTwo);
+      // }
+
+      // userDetailsFun(userDetails);
+
+      // let userObj = [
+      //   { id: 1, name: "John", age: 23, isAdmin: true },
+      //   { id: 2, name: "Jack", age: 22, isAdmin: false },
+      //   { id: 3, name: "Mary", age: 21, isAdmin: true },
+      //   { id: 4, name: "Robert", age: 20, isAdmin: false },
+      //   { id: 5, name: "Prince", age: 19, isAdmin: true },
+      // ];
+      // console.log(userObj);
+      // let newUserObj = userObj.map((user) => {
+      //   return {
+      //     ...user,
+      //     age: user.age * 2,
+      //   };
+      // });
+      // console.log(newUserObj);
     </script>
   </body>
 </html>
