@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Traversal" />
+    <title>Traversal</title>
+  </head>
+  <body>
+    <h2>Traversal</h2>
+    <div id="container">
+      <h1>Heading - 1</h1>
+      <h2 style="visibility: hidden">Hello</h2>
+      <h3 id="head">Heading - 3</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. In,
+        dignissimos!
+      </p>
+    </div>
+    <p id="para">This is a paragraph</p>
+
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Projects</li>
+      <li>Contact</li>
+    </ul>
+
+    <script>
+      // Traversal
+      // parentNode => traverse from child to parent element
+      // childElement.parentNode
+      // const head = document.querySelector("#head");
+      // console.log(head);
+      // const headParent = head.parentNode;
+      // console.log(headParent);
+
+      // parentEle.firstElementChild
+      const container = document.querySelector("#container");
+      console.log(container);
+      // const containerFirstChild = container.firstElementChild;
+      // console.log(containerFirstChild);
+
+      // parentEle.lastElementChild
+      // const containerLastChild = container.lastElementChild;
+      // console.log(containerLastChild);
+
+      // parentEle.children => HTMLCollection
+      // const containerChildren = container.children;
+      // console.log(containerChildren);
+      // for (const child of containerChildren) {
+      //   console.log(child.textContent);
+      // }
+      // let newArr = [];
+      // for (const child of containerChildren) {
+      //   newArr.push(child.textContent);
+      // }
+      // console.log(newArr);
+
+      // const menuItems = document.querySelector("#menu").children;
+      // console.log(Array.from(menuItems));
+      // let menuItemsText = Array.from(menuItems).map((item) => item.textContent);
+      // console.log(menuItemsText);
+
+      // current.nextElementSibling
+      // const para = document.querySelector("#para");
+      // console.log(para.nextElementSibling);
+
+      // current.previousElementSibling
+      // console.log(para.previousElementSibling);
+
+      // Get all the childs of body element using "para"
+      // const allChilds = para.parentElement.children;
+      // console.log(allChilds);
+      // Array.from(allChilds).forEach((child) => {
+      //   if (child.id !== "container") console.log(child);
+      // });
+    </script>
+  </body>
+</html>
