@@ -5,16 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="Attribute" />
     <title>Attribute</title>
+    <style>
+      .head {
+        height: 50px;
+        width: 300px;
+        background-color: green;
+        color: white;
+        padding: 10px;
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <h2>Attribute</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, nemo.
+    </p>
+    <button onclick="addStyles()">Click</button>
 
     <script>
       // Attribute
-      // setAttribute()
-      // getAttribute()
-      // removeAttribute()
-      // hasAttribute()
+      // ele.setAttribute("key", "value") => add or update attribute
+      // const para = document.querySelector("p");
+      // const btn = document.querySelector("button");
+      // para.setAttribute("id", "para");
+      // para.setAttribute("id", "new-para");
+      // btn.setAttribute("disabled", "");
+      // ele.getAttribute("key") => value
+      // console.log(para.getAttribute("id"));
+
+      // ele.removeAttribute("key")
+      // btn.removeAttribute("disabled");
+
+      // ele.hasAttribute("key") => true/false
+      // console.log(btn.hasAttribute("disabled"));
+
+      // Event
+      // Level - 2
+      // const btnClick = document.querySelector("button");
+      // btnClick.addEventListener("click", applyStyles);
+
+      // function applyStyles() {
+      //   document.querySelector("h2").setAttribute("class", "head");
+      // }
+
+      // HTMLEvents => Level - 0
+      // function addStyles() {
+      //   document.querySelector("h2").setAttribute("class", "head");
+      // }
     </script>
   </body>
 </html>

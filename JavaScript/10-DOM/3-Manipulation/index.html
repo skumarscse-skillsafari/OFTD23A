@@ -8,6 +8,31 @@
   </head>
   <body>
     <h2 style="visibility: hidden">Manipulation</h2>
+    <ul id="menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Projects</li>
+      <li>Portfolio</li>
+    </ul>
+
+    <ol id="subjects">
+      <li>Computer</li>
+    </ol>
+
+    <div id="level-1">
+      <h2>Heading</h2>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <div id="level-2">
+        <h2>Heading - Level 2</h2>
+        <p id="para">Paragraph - Level 2</p>
+      </div>
+    </div>
+
+    <ul id="adjacent">
+      <li>John</li>
+    </ul>
+
+    <h2 class="newhead">Cloned Menu</h2>
 
     <script>
       // Manipulation
@@ -42,29 +67,94 @@
 
       // innerText vs textContent
       // textContent => returns only human readable content inbetween the selected element tags
-      const para = document.createElement("p");
-      para.id = "para";
-      para.style = "visibility: hidden";
-      // para.innerText = "This is a paragraph";
-      console.log(para.innerText);
-      console.log(para.textContent);
-      document.querySelector("body").firstElementChild.after(para);
+      // const para = document.createElement("p");
+      // para.id = "para";
+      // para.style = "visibility: hidden";
+      // // para.innerText = "This is a paragraph";
+      // console.log(para.innerText);
+      // console.log(para.textContent);
+      // document.querySelector("body").firstElementChild.after(para);
 
       // innerHTML vs createElement
 
-      // after(...nodes)
+      // after(...nodes) and before(...nodes)
+      // const home = document.querySelector("#menu").firstElementChild;
+      // console.log(home);
+      // const li = document.createElement("li");
+      // li.textContent = "Our Services";
+      // home.after(li);
+
+      // const para = document.createElement("p");
+      // para.textContent = "New paragraph";
+      // para.id = "after";
+      // const menu = document.querySelector("#menu");
+      // menu.after(para);
+
+      // const subjectsArr = ["English", "Maths", "Physics", "Chemistry"];
+      // let subjectsEle = subjectsArr.map((subject) => {
+      //   let ele = document.createElement("li");
+      //   ele.textContent = subject;
+      //   return ele;
+      // });
+      // console.log(subjectsEle);
+      // document
+      //   .querySelector("#subjects")
+      //   .firstElementChild.after(...subjectsEle);
+
       // append(...nodes) => next to last child
       // prepend(...nodes) => before the first child
+      // const subjectsArr = ["English", "Maths", "Physics", "Chemistry"];
+      // const subjectsEle = subjectsArr.map((subject) => {
+      //   const li = document.createElement("li");
+      //   li.textContent = subject;
+      //   return li;
+      // });
+      // document.querySelector("#subjects").append(...subjectsEle);
+
+      // const para = document.querySelector("#para");
+      // console.log(para.parentNode.parentNode);
+
       // insertAdjacentHTML()
+      // options
       // beforebegin => before the element
       // afterbegin => before the first child
       // beforeend => after the last child
       // afterend => after the element
+
+      // syntax
+      // currentEle.insertAdjacentHTML("options", newEle)
+      // const adjacent = document.querySelector("#adjacent");
+
+      // adjacent.insertAdjacentHTML("beforebegin", "<h2>List of students:</h2>");
+      // adjacent.insertAdjacentHTML("afterend", "<hr />");
+      // adjacent.insertAdjacentHTML("afterbegin", "<li>Jack</li>");
+      // adjacent.insertAdjacentHTML("beforeend", "<li>Mary</li>");
+
       // parentNode.replaceChild(newChild, oldChild)
+      // const menu = document.querySelector("#menu");
+      // const li = document.createElement("li");
+      // li.textContent = "Our Services";
+      // menu.replaceChild(li, menu.firstElementChild);
+
       // originalNode.cloneNode(true/false)
+      // true => clone along with the descendents/childs
+      // false (default) => clone only the direct element
+      // const menu = document.querySelector("#menu");
+      // const newHead = document.querySelector(".newhead");
+      // newHead.after(menu.cloneNode(true));
+
       // parentNode.removeChild(childNode)
+      // const menu = document.querySelector("#menu");
+      // menu.removeChild(menu.lastElementChild);
+      // // element.remove()
+      // menu.remove();
+
       // parentNode.insertBefore(newNode, existingNode)
       //  insert a node before another node as a child node of a specified parent node.
+      // const menu = document.querySelector("#menu");
+      // const li = document.createElement("li");
+      // li.textContent = "New Menu";
+      // menu.insertBefore(li, menu.lastElementChild);
     </script>
   </body>
 </html>
