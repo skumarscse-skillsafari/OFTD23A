@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="classList" />
+    <title>classList</title>
+    <style>
+      .bg-color {
+        background-color: green;
+      }
+      .color {
+        color: white;
+      }
+      .color-replace {
+        color: crimson;
+      }
+      .padding {
+        padding: 20px;
+      }
+      .border-radius {
+        border-radius: 10px;
+      }
+
+      .container {
+        height: 100px;
+        width: 100px;
+        background-color: cornflowerblue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>classList</h2>
+    <p id="para">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam,
+      molestiae.
+    </p>
+    <div id="container"></div>
+    <button id="add">Add</button>
+    <button id="remove">Remove</button>
+    <button id="toggle">Toggle</button>
+
+    <script>
+      // ele.classList => array of existing classnames
+      const para = document.querySelector("#para");
+      console.log(para.classList);
+      // ele.classList.add("className", "...")
+      para.classList.add("bg-color", "color", "padding");
+      // ele.classList.remove("className")
+      // para.classList.remove("color");
+      // ele.classList.replace("oldClassName", "newClassName")
+      // para.classList.replace("color", "color-replace");
+      // ele.classList.contains("className")
+      // console.log(para.classList.contains("margin"));
+      // ele.classList.toggle("className")
+
+      const addBtn = document.querySelector("#add");
+      const removeBtn = document.querySelector("#remove");
+      const toggleBtn = document.querySelector("#toggle");
+      const container = document.querySelector("#container");
+      // addBtn.addEventListener("click", (e) => {
+      //   // console.log(e);
+      //   container.classList.add("container");
+      // });
+
+      // removeBtn.addEventListener("click", () => {
+      //   container.classList.remove("container");
+      // });
+
+      // toggleBtn.addEventListener("click", () => {
+      //   container.classList.toggle("container");
+      // });
+    </script>
+  </body>
+</html>

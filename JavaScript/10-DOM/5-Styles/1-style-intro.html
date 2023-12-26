@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Style - Intro" />
+    <title>Style - Intro</title>
+  </head>
+  <body>
+    <h2>Style - Intro</h2>
+    <p id="para">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Veritatis,
+      laboriosam.
+    </p>
+
+    <script>
+      // Style - Intro
+      const para = document.querySelector("#para");
+      console.log(para.style); // return CSSStyleDeclaration object
+      // para.style.backgroundColor = "green";
+      // para.style.color = "white";
+      // para.style.padding = "20px";
+      para.style.cssText =
+        "background-color: green; color: white; padding: 20px";
+
+      // style.cssProperty
+      // style.cssText = "..."
+      console.log(para.style.cssText);
+      // para.style.cssText += "border-radius: 20px"; // append new property
+      // para.style.cssText = ""; // remove all the properties
+      // style.cssText += "..."
+      // ele.setAttribute("key", "values")
+      // para.setAttribute("style", "border-radius: 20px");
+      // window.getComputedStyle(ele)
+      console.log(window.getComputedStyle(para));
+      console.log(window.getComputedStyle(para).padding);
+      // ele.className = "..."
+      // ele.className += "..."
+      para.className = "para-1";
+      para.className += " para-2";
+    </script>
+  </body>
+</html>
