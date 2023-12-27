@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Handling Form Elements" />
+    <title>Handling Form Elements</title>
+  </head>
+  <body>
+    <h2>Handling Form Elements</h2>
+    <h3><u>Single line inputs</u></h3>
+    <form action="#">
+      <table>
+        <tr>
+          <td><label for="username">Enter username:</label></td>
+          <td>
+            <input
+              type="text"
+              name="username"
+              id="username"
+              placeholder="Enter username"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="age">Enter Age:</label></td>
+          <td>
+            <input type="number" name="age" id="age" placeholder="Enter age" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="email">Enter user email:</label></td>
+          <td>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter user email"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="password">Enter password:</label></td>
+          <td>
+            <input
+              type="password"
+              name="password"
+              id="password"
+              placeholder="Enter password"
+            />
+          </td>
+        </tr>
+      </table>
+      <p>
+        <input type="submit" value="Submit" id="submit" />
+        <input type="reset" value="Clear" />
+      </p>
+    </form>
+
+    <script>
+      // Handling Form Elements
+      const username = document.querySelector("#username");
+      const age = document.querySelector("#age");
+      const email = document.querySelector("#email");
+      const password = document.querySelector("#password");
+      const submitBtn = document.querySelector("#submit");
+      submitBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        // console.log(username.value);
+        // console.log(age.value);
+        // console.log(email.value);
+        // console.log(password.value);
+        if (
+          username.value !== "" &&
+          age.value !== "" &&
+          email.value !== "" &&
+          password.value !== ""
+        ) {
+          const userDetails = {
+            username: username.value,
+            age: age.value,
+            email: email.value,
+            password: password.value,
+          };
+          console.log(userDetails);
+        } else {
+          console.log("Enter all the fields");
+        }
+      });
+    </script>
+  </body>
+</html>

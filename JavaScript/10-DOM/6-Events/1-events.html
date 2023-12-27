@@ -5,16 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="Description" content="Events" />
     <title>Events</title>
+    <style>
+      #page-1 {
+        height: 100vh;
+      }
+    </style>
   </head>
   <body>
-    <h2>Events</h2>
+    <h2 id="head">Events</h2>
     <p id="para">
       Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perspiciatis,
       quibusdam?SS
     </p>
+    <p>
+      <input
+        type="text"
+        name="username"
+        id="username"
+        placeholder="Enter username"
+      />
+    </p>
+    <hr />
+    <p id="input"></p>
+    <hr />
     <button id="btn" class="demo">Click</button>
     <button id="add">Add Event</button>
     <button id="remove">Remove Event</button>
+    <div id="page-1"></div>
+    <p>This is a paragraph</p>
+    <button id="up">Click</button>
 
     <script>
       // Events
@@ -57,12 +76,63 @@
       // removeBtn.addEventListener("click", () => {
       //   btn.removeEventListener("click", demoEvents);
       // });
+
       // DOMContentLoaded, load
-      // Mouse events - mousedown, mouseup, click
+      // DOMContentLoaded => Used to ensure all the html elements are loaded
+      // document
+      // document.addEventListener("DOMContentLoaded", () => {
+      //   console.log("DOMContentLoaded");
+      //   for (let index = 0; index <= 10; index++) {
+      //     console.log(index);
+      //   }
+      //   console.log(document.querySelector("#para").textContent);
+      // });
+
+      // load => ensures all the html elements and resources are loaded
+      // window.addEventListener("load", () => {
+      //   console.log(document.querySelector("#para").textContent.toUpperCase());
+      // });
+
+      // Mouse events - click, mouseover
+      // const para = document.querySelector("#para");
+      // para.addEventListener("mouseover", () => {
+      //   alert(para.textContent);
+      // });
+
       // Keyboard events - keydown, keyup, keypress
+      const username = document.querySelector("#username");
+      // console.log(username);
+      // username.addEventListener("mouseover", () => {
+      //   alert(username.value);
+      // });
+      // username.addEventListener("keydown", (e) => {
+      //   console.log(e);
+      // });
+
       // ele.scrollIntoView(false)
+      // const head = document.querySelector("#head");
+      // const upBtn = document.querySelector("#up");
+      // upBtn.addEventListener("click", () => {
+      //   head.scrollIntoView({ behavior: "smooth" });
+      // });
+
       // focus and blur event
+      // username.addEventListener("focus", () => {
+      //   username.style.backgroundColor = "green";
+      // });
+
+      // username.addEventListener("blur", () => {
+      //   username.style.backgroundColor = "";
+      // });
+
       // change and input event
+      // username.addEventListener("change", () => {
+      //   document.querySelector("#input").textContent = username.value;
+      // });
+
+      // username.addEventListener("input", () => {
+      //   document.querySelector("#input").textContent = username.value;
+      // });
     </script>
   </body>
 </html>
