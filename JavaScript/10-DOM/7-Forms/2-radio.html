@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Radio Button" />
+    <title>Radio Button</title>
+  </head>
+  <body>
+    <h2>Handling Radio Button</h2>
+    <form action="#">
+      <h3>Select any one option</h3>
+      <input type="radio" name="subject" id="english" value="English" />English
+      <input type="radio" name="subject" id="maths" value="Maths" />Maths
+      <input type="radio" name="subject" id="physics" value="Physics" />Physics
+      <input
+        type="radio"
+        name="subject"
+        id="chemistry"
+        value="Chemistry"
+      />Chemistry
+      <br />
+      <br />
+      <button id="btn">Click</button>
+    </form>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // Handling Radio Button
+      const allOptions = document.querySelectorAll("[name='subject']");
+      console.log(allOptions);
+      const result = document.querySelector("#result");
+      const btn = document.querySelector("#btn");
+      let selectedOption = "";
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        for (const option of allOptions) {
+          if (option.checked) {
+            selectedOption = option.value;
+          }
+        }
+        result.textContent = selectedOption
+          ? `User selected: ${selectedOption}`
+          : "User not selected any option";
+      });
+
+      // const options = ["John", "Mary", "Raam", "Rajesh"]
+    </script>
+  </body>
+</html>
