@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Handling Select" />
+    <title>Handling Select</title>
+  </head>
+  <body>
+    <h2>Handling Select</h2>
+    <h3>Select option(s)</h3>
+    <select name="subjects" id="subjects" multiple>
+      <option value="English">English</option>
+      <option value="Maths">Maths</option>
+      <option value="Physics">Physics</option>
+      <option value="Chemistry">Chemistry</option>
+      <option value="Computer">Computer</option>
+    </select>
+    <br />
+    <br />
+    <button id="btn">Click</button>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      // Handling Select box
+      const selectEle = document.querySelector("#subjects");
+      const btn = document.querySelector("#btn");
+      const result = document.querySelector("#result");
+      console.log(selectEle.options); // HTMLElementCollection
+      btn.addEventListener("click", () => {
+        for (const option of selectEle.options) {
+          if (option.selected) {
+            console.log(option.value);
+            result.textContent = `User selected ${option.value}`;
+          }
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="Description" content="Check Box" />
+    <title>Check Box</title>
+  </head>
+  <body>
+    <h2>Handling Checkbox</h2>
+    <h2>Select option(s)</h2>
+    <input type="checkbox" name="english" id="english" value="English" />English
+    <input type="checkbox" name="maths" id="maths" value="Maths" />Maths
+    <input type="checkbox" name="physics" id="physics" value="Physics" />Physics
+    <input
+      type="checkbox"
+      name="chemistry"
+      id="chemistry"
+      value="Chemistry"
+    />Chemistry
+    <input
+      type="checkbox"
+      name="computer"
+      id="computer"
+      value="Computer"
+    />Computer
+    <br />
+    <br />
+    <button id="btn">Click</button>
+    <hr />
+    <p id="result"></p>
+
+    <script>
+      const btn = document.querySelector("#btn");
+      const result = document.querySelector("#result");
+      const allOptions = document.querySelectorAll("[type='checkbox']");
+      console.log(allOptions);
+      //   let selectedOptions = [];
+      //   btn.addEventListener("click", (e) => {
+      //     e.preventDefault();
+      //     for (const option of allOptions) {
+      //       if (option.checked) {
+      //         selectedOptions.push(option.value);
+      //       }
+      //     }
+      //     console.log(selectedOptions);
+      //     result.textContent =
+      //       selectedOptions.length <= 0
+      //         ? "User not selected any option"
+      //         : `User selected ${selectedOptions.join(" ")}`;
+      //     selectedOptions = [];
+      //   });
+      let selectedOptions = [];
+      for (const option of allOptions) {
+        option.addEventListener("change", () => {
+          let selectedOptionsNode = document.querySelectorAll(
+            "[type='checkbox']:checked"
+          );
+          console.log(selectedOptionsNode);
+          selectedOptionsNode.forEach((opt) => {
+            selectedOptions.push(opt.value);
+          });
+        });
+      }
+      btn.addEventListener("click", () => {
+        result.textContent =
+          selectedOptions.length <= 0
+            ? "User not selected any option"
+            : `User selected ${selectedOptions.join(" ")}`;
+        selectedOptions = [];
+      });
+    </script>
+  </body>
+</html>
