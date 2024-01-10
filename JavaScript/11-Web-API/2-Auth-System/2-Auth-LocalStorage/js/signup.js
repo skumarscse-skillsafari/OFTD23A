@@ -36,7 +36,7 @@ submitBtn.addEventListener("click", (e) => {
       confirmPassword.value = "";
       signupForm.classList.remove("was-validated");
     } else {
-      alert("password and confirm password must be same");
+      alert("Password and confirm password must be same");
     }
   } else {
     alert("Fields should not be empty");

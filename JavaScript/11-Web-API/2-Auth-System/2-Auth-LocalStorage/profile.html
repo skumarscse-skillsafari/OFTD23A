@@ -52,7 +52,7 @@
               ></button>
             </div>
             <div class="modal-body">
-              <form action="#" novalidate class="was-validated">
+              <form action="#" novalidate id="signin-form">
                 <div class="form-floating mb-3">
                   <input
                     type="text"
@@ -138,6 +138,7 @@
       console.log(username.textContent);
       username.textContent += ` ${userDetails.firstName}, ${userDetails.lastName}`;
 
+      const signinForm = document.querySelector("#signin-form");
       const firstName = document.querySelector("#firstname");
       const lastName = document.querySelector("#lastname");
       const email = document.querySelector("#email");
@@ -152,18 +153,35 @@
       updateBtn.addEventListener("click", (e) => {
         e.preventDefault();
         if (confirm("Are you sure to edit the details?")) {
-          if (password.value === confirmPassword.value) {
-            const updatedUser = {
-              id: id,
-              firstName: firstName.value,
-              lastName: lastName.value,
-              email: email.value,
-              password: password.value,
-              confirmPassword: confirmPassword.value,
-            };
-            sessionStorage.removeItem(id);
-            localStorage.setItem(id, JSON.stringify(updatedUser));
-            window.location.href = "./index.html";
+          signinForm.classList.add("was-validated");
+          e.preventDefault();
+          if (
+            firstName.value &&
+            lastName.value &&
+            email.value &&
+            password.value &&
+            confirmPassword.value
+          ) {
+            if (password.value === confirmPassword.value) {
+              const updatedUser = {
+                id: id,
+                firstName: firstName.value,
+                lastName: lastName.value,
+                email: email.value,
+                password: password.value,
+                confirmPassword: confirmPassword.value,
+              };
+              console.log(updatedUser);
+              localStorage.setItem(userDetails.id, JSON.stringify(updatedUser));
+              sessionStorage.removeItem(id);
+              alert("User updated successfully");
+              window.location.href = "./index.html";
+              signupForm.classList.remove("was-validated");
+            } else {
+              alert("Password and confirm password must be same");
+            }
+          } else {
+            alert("Fields should not be empty");
           }
         }
       });
