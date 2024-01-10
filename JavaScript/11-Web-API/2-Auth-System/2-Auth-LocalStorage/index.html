@@ -16,7 +16,7 @@
   <body>
     <div class="container">
       <h2 class="display-5 text-center mb-4">Auth System - Sign In Page</h2>
-      <form action="#" novalidate class="was-validated">
+      <form action="#" novalidate id="signin-form">
         <div class="form-floating mb-3">
           <input
             type="email"
@@ -55,28 +55,37 @@
 
     <!-- Internal JS -->
     <script>
+      const signInForm = document.querySelector("#signin-form");
       const email = document.querySelector("#email");
       const password = document.querySelector("#password");
       const signInBtn = document.querySelector("#signin-btn");
 
       signInBtn.addEventListener("click", (e) => {
         e.preventDefault();
-        const allUsers = Object.values(localStorage);
-        console.log(allUsers);
-        const allUsersObj = allUsers.map((user) => JSON.parse(user));
-        console.log(allUsersObj);
-        const findUser = allUsersObj.find((user) => {
-          console.log(user.email, email.value, user.password, password.value);
-          if (user.email === email.value && user.password === password.value) {
-            return user;
+        signInForm.classList.add("was-validated");
+        if (email.value && password.value) {
+          const allUsers = Object.values(localStorage);
+          console.log(allUsers);
+          const allUsersObj = allUsers.map((user) => JSON.parse(user));
+          console.log(allUsersObj);
+          const findUser = allUsersObj.find((user) => {
+            console.log(user.email, email.value, user.password, password.value);
+            if (
+              user.email === email.value &&
+              user.password === password.value
+            ) {
+              return user;
+            }
+          });
+          if (findUser) {
+            sessionStorage.setItem(findUser.id, JSON.stringify(findUser));
+            alert("Logged in successfully");
+            window.location.href = `./profile.html?id=${findUser.id}`;
+          } else {
+            alert("User not found");
           }
-        });
-        if (findUser) {
-          sessionStorage.setItem(findUser.id, JSON.stringify(findUser));
-          alert("Logged in successfully");
-          window.location.href = `./profile.html?id=${findUser.id}`;
         } else {
-          alert("User not found");
+          alert("Fields should not be empty");
         }
       });
     </script>
