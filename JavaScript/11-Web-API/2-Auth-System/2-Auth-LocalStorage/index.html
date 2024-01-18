@@ -80,7 +80,7 @@
           if (findUser) {
             sessionStorage.setItem(findUser.id, JSON.stringify(findUser));
             alert("Logged in successfully");
-            window.location.href = `./profile.html?id=${findUser.id}`;
+            // window.location.href = `./profile.html?id=${findUser.id}`;
           } else {
             alert("User not found");
           }
