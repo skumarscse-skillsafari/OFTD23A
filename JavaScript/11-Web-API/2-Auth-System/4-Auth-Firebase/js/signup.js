@@ -31,17 +31,19 @@ register.addEventListener("click", (e) => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          // console.log(user);
+          console.log(user);
           const db = getDatabase();
-          set(ref(db, "usersdata/" + user.uid), {
-            firstname: firstname.value,
-            lastname: lastname.value,
-            email: email.value,
-            password: password.value,
-            confirmPassword: confirmPassword.value,
+          set(ref(db, "usersdata/" + user?.uid), {
+            firstname: firstname?.value,
+            lastname: lastname?.value,
+            email: email?.value,
+            password: password?.value,
+            confirmPassword: confirmPassword?.value,
           });
           alert("User created successfully");
-          window.location.href = "./index.html";
+          setTimeout(() => {
+            window.location.href = "./index.html";
+          }, 5000);
         })
         .catch((error) => {
           const errorCode = error.code;
