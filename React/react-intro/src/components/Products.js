@@ -14,9 +14,13 @@ const Products = () => {
   return (
     <div>
       <h2>Products Component</h2>
-      {products.map((product) => (
-        <Product product={product} key={product.id} />
-      ))}
+      {products.length <= 0 ? (
+        <h2>Loading...</h2>
+      ) : (
+        products.map((product) => (
+          <Product product={product} key={product.id} />
+        ))
+      )}
     </div>
   );
 };

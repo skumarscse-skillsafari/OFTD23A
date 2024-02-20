@@ -7,8 +7,12 @@ const Product = ({ product }) => {
     <div>
       <h2>Product Component</h2>
       <div>
-        <h3>Product Name: {product.title}</h3>
-        <p>Product Description: {product.description}</p>
+        <h3>
+          <strong>Product Name:</strong> {product.title}
+        </h3>
+        <p>
+          <strong>Product Description:</strong> {product.description}
+        </p>
 
         <p>
           <img
@@ -23,10 +27,18 @@ const Product = ({ product }) => {
         </button>
         {showProducts && (
           <div>
-            <p>Product Price: {product.price}</p>
-            <p>Product Category: {product.category}</p>
-            <p>Product Rating: {product.rating.rate}</p>
-            <p>Product Count: {product.rating.count}</p>
+            <p>
+              <strong>Product Price:</strong> {product.price}
+            </p>
+            <p>
+              <strong>Product Category:</strong> {product.category}
+            </p>
+            <p>
+              <strong>Product Rating:</strong> {product.rating.rate}
+            </p>
+            <p>
+              <strong>Product Count:</strong> {product.rating.count}
+            </p>
           </div>
         )}
         <hr />
