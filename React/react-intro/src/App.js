@@ -4,6 +4,7 @@ import Nav from "./components/Nav";
 import About from "./components/About";
 import Counter from "./components/Counter";
 import Products from "./components/Products";
+import UserReducer from "./components/UserReducer";
 
 function App() {
   return (
@@ -11,7 +12,8 @@ function App() {
       {/* <Nav />
       <About /> */}
       {/* <Counter /> */}
-      <Products />
+      {/* <Products /> */}
+      <UserReducer />
     </div>
   );
 }
