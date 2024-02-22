@@ -1,5 +1,6 @@
 import { useReducer, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { userReducer } from "./reducer/userReducer";
 const UserReducer = () => {
   let initialValue = [
     { id: 1, username: "John", age: 23, isAdmin: true },
@@ -13,20 +14,6 @@ const UserReducer = () => {
     age: 0,
     isAdmin: false,
   });
-
-  function userReducer(users, action) {
-    // action => {type: , payload: }
-    console.log(users);
-    console.log(action);
-    switch (action.type) {
-      case "ADD_USER":
-        return [...users, action.payload];
-      case "DELETE_USER":
-        return users.filter((user) => user.id !== action.payload);
-      default:
-        return users;
-    }
-  }
 
   function handleInput(e) {
     // console.log(e.target.name);
@@ -85,7 +72,15 @@ const UserReducer = () => {
             onChange={handleInput}
           />
         </p>
-        <button>Update</button> <button onClick={handleSubmit}>Add</button>
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            dispatchUsers({ type: "UPDATE_USER", payload: newUser });
+          }}
+        >
+          Update
+        </button>{" "}
+        <button onClick={handleSubmit}>Add</button>
       </form>
       <hr />
       {users.map((user) => {
@@ -94,11 +89,13 @@ const UserReducer = () => {
             <h2>Username: {user.username}</h2>
             <p>User Age: {user.age}</p>
             <p>isAdmin?: {user.isAdmin ? "Yes" : "No"}</p>
-            <button>Update</button>{" "}
+            <button onClick={() => setNewUser(user)}>Update</button>{" "}
             <button
-              onClick={() =>
-                dispatchUsers({ type: "DELETE_USER", payload: user.id })
-              }
+              onClick={() => {
+                if (confirm("Are you sure to delete?")) {
+                  dispatchUsers({ type: "DELETE_USER", payload: user.id });
+                }
+              }}
             >
               Delete
             </button>

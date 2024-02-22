@@ -1,10 +1,17 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Nav from "./components/Nav";
-import About from "./components/About";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Nav from "./components/Nav";
+// import About from "./components/About";
 import Counter from "./components/Counter";
 import Products from "./components/Products";
 import UserReducer from "./components/UserReducer";
+import Nav from "./components/pages/Nav";
+import Home from "./components/pages/Home";
+import About from "./components/pages/About";
+import Projects from "./components/pages/Projects";
+import Contact from "./components/pages/Contact";
+import ProductDetails from "./components/ProductDetails";
 
 function App() {
   return (
@@ -13,7 +20,18 @@ function App() {
       <About /> */}
       {/* <Counter /> */}
       {/* <Products /> */}
-      <UserReducer />
+      {/* <UserReducer /> */}
+      <BrowserRouter>
+        <Nav />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/products/:id" element={<ProductDetails />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }

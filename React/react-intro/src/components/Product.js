@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import ProductDetails from "./ProductDetails";
 const Product = ({ product }) => {
   // props = {product: {...}}
   // {product} = props
@@ -22,25 +24,13 @@ const Product = ({ product }) => {
             width={100}
           />
         </p>
-        <button onClick={() => setShowProducts((current) => !current)}>
+        <Link
+          to={`/products/${product.id}`}
+          onClick={() => setShowProducts((current) => !current)}
+        >
           {showProducts ? "Hide details" : "Show more"}
-        </button>
-        {showProducts && (
-          <div>
-            <p>
-              <strong>Product Price:</strong> {product.price}
-            </p>
-            <p>
-              <strong>Product Category:</strong> {product.category}
-            </p>
-            <p>
-              <strong>Product Rating:</strong> {product.rating.rate}
-            </p>
-            <p>
-              <strong>Product Count:</strong> {product.rating.count}
-            </p>
-          </div>
-        )}
+        </Link>
+
         <hr />
       </div>
     </div>
