@@ -12,6 +12,7 @@ import About from "./components/pages/About";
 import Projects from "./components/pages/Projects";
 import Contact from "./components/pages/Contact";
 import ProductDetails from "./components/ProductDetails";
+import Demo from "./Demo";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/products" element={<Products />} />
           <Route path="/products/:id" element={<ProductDetails />} />
+          <Route path="/demo" element={<Demo />} />
         </Routes>
       </BrowserRouter>
     </div>
