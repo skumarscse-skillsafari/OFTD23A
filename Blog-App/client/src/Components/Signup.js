@@ -25,7 +25,7 @@ const Signup = () => {
 
     await axios
       .post("http://localhost:5000/api/v1/users/signup", user)
-      .then((res) => console.log(res.data))
+      .then((res) => alert(res.data.message))
       .catch((error) => console.log(error));
   };
   return (

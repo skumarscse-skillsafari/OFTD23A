@@ -1,8 +1,10 @@
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 const NavComp = () => {
+  const navigate = useNavigate();
+  const token = localStorage.getItem("token");
   return (
     <Navbar bg="primary" data-bs-theme="dark">
       <Container>
@@ -13,15 +15,33 @@ const NavComp = () => {
           <Link className="btn btn-primary me-4" to="/">
             Posts
           </Link>
-          <Link className="btn btn-primary me-4" to="/create">
+          <button
+            className="btn btn-primary me-4"
+            onClick={() => {
+              {
+                localStorage.getItem("token")
+                  ? navigate("/create", { replace: true })
+                  : alert("User must loggedin to create post");
+              }
+            }}
+          >
             Create Post
-          </Link>
-          <Link className="btn btn-primary me-4" to="/signin">
-            Sign In
-          </Link>
-          <Link className="btn btn-primary" to="/signup">
-            Sign Up
-          </Link>
+          </button>
+
+          {token ? (
+            <Link className="btn btn-primary" to="/profile">
+              Profile
+            </Link>
+          ) : (
+            <>
+              <Link className="btn btn-primary me-4" to="/signin">
+                Sign In
+              </Link>
+              <Link className="btn btn-primary" to="/signup">
+                Sign Up
+              </Link>
+            </>
+          )}
         </Nav>
       </Container>
     </Navbar>

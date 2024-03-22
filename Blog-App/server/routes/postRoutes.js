@@ -1,5 +1,6 @@
 import express from "express";
 const router = express.Router();
+import auth from "./auth.js";
 import {
   createPost,
   getAllPosts,
@@ -8,7 +9,7 @@ import {
   deletePostById,
 } from "../controllers/postController.js";
 // createPost
-router.post("/:id", createPost);
+router.post("/:id", auth, createPost);
 
 // getAllPosts
 router.get("/", getAllPosts);
@@ -17,9 +18,9 @@ router.get("/", getAllPosts);
 router.get("/:id", getPostById);
 
 // updatePostById
-router.put("/:id", updatePostById);
+router.put("/:id", auth, updatePostById);
 
 // deletePostById
-router.delete("/:id", deletePostById);
+router.delete("/:id", auth, deletePostById);
 
 export default router;

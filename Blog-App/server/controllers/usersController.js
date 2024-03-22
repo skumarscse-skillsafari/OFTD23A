@@ -1,5 +1,9 @@
 import User from "../models/userModel.js";
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
+import dotenv from "dotenv";
+dotenv.config();
+const SECRET = process.env.SECRET;
 
 // SignUP
 export const signup = async (req, res) => {
@@ -44,9 +48,19 @@ export const signin = async (req, res) => {
       return res
         .status(404)
         .json({ success: false, message: "Invalid credentials" });
+
+    const token = jwt.sign(
+      { email: findUser.email, id: findUser._id },
+      SECRET,
+      { expiresIn: "1hr" }
+    );
     res
       .status(200)
-      .json({ success: true, message: "User LoggedIn successfully" });
+      .json({
+        success: true,
+        message: "User LoggedIn successfully",
+        token: token,
+      });
   } catch (error) {
     res.status(404).json({ success: false, message: error });
   }
