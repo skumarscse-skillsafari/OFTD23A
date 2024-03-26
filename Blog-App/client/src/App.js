@@ -7,6 +7,8 @@ import CreatePost from "./Components/CreatePost";
 import Signin from "./Components/Signin";
 import Signup from "./Components/Signup";
 import Profile from "./Components/Profile";
+import SinglePost from "./Components/SinglePost";
+import UpdatePost from "./Components/UpdatePost";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
         <Route path="/signin" element={<Signin />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/profile" element={<Profile />} />
+        <Route path="/post/:id" element={<SinglePost />} />
+        <Route path="/update/:id" element={<UpdatePost />} />
       </Routes>
     </Router>
   );

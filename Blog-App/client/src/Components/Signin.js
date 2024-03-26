@@ -31,7 +31,7 @@ const Signin = () => {
         navigate("/", { replace: true });
         // window.location.reload()
       })
-      .catch((error) => console.log(error));
+      .catch((error) => alert(error.response.data.message));
   };
   return (
     <div className="container">

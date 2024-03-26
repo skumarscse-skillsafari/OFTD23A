@@ -12,6 +12,7 @@ import {
 router.post("/:id", auth, createPost);
 
 // getAllPosts
+// http://localhost:5000/api/v1/posts
 router.get("/", getAllPosts);
 
 // getPostById

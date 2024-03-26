@@ -33,6 +33,7 @@ export const getAllPosts = async (req, res) => {
       return {
         _id: post._id,
         author: post.author.username,
+        author_id: post.author._id,
         title: post.title,
         description: post.description,
         image: post.image,

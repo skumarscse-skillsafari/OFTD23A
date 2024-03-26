@@ -1,10 +1,11 @@
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import FileBase64 from "react-file-base64";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-const CreatePost = () => {
+const UpdatePost = () => {
+  const { id } = useParams();
   const navigate = useNavigate();
   const [post, setPost] = useState({
     title: "",
@@ -12,7 +13,12 @@ const CreatePost = () => {
     image: "",
     tags: "",
   });
-
+  useEffect(() => {
+    axios
+      .get(`http://localhost:5000/api/v1/posts/${id}`)
+      .then((res) => setPost(res.data.data))
+      .catch((error) => alert(error.response.data.message));
+  }, []);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPost((prev) => {
@@ -26,12 +32,8 @@ const CreatePost = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
-    const jwt = JSON.parse(atob(token.split(".")[1]));
-    console.log(jwt);
-    const { id } = jwt;
-    console.log(post);
     await axios
-      .post(`http://localhost:5000/api/v1/posts/${id}`, post, {
+      .put(`http://localhost:5000/api/v1/posts/${id}`, post, {
         headers: {
           "x-access-token": token,
         },
@@ -44,7 +46,7 @@ const CreatePost = () => {
   };
   return (
     <div className="container">
-      <h2 className="text-center display-3">Create Post</h2>
+      <h2 className="text-center display-3">Update Post</h2>
       <Form>
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>Title</Form.Label>
@@ -94,7 +96,7 @@ const CreatePost = () => {
           />
         </Form.Group>
         <Button key="primary" variant="primary" onClick={handleSubmit}>
-          Create Post
+          Update Post
         </Button>
         {"  "}
         <Button key="secondary" variant="secondary">
@@ -105,4 +107,4 @@ const CreatePost = () => {
   );
 };
 
-export default CreatePost;
+export default UpdatePost;
