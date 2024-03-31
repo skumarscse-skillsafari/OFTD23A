@@ -3,6 +3,7 @@ import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../api/baseURL";
 const Signin = () => {
   const navigate = useNavigate();
   const [user, setUser] = useState({
@@ -24,7 +25,7 @@ const Signin = () => {
     e.preventDefault();
 
     await axios
-      .post("http://localhost:5000/api/v1/users/signin", user)
+      .post(`${BASE_URL}/api/v1/users/signin`, user)
       .then((res) => {
         alert(res.data.message);
         localStorage.setItem("token", res.data.token);

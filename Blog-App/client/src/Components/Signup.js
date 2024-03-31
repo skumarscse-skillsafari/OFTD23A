@@ -2,6 +2,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import { useState } from "react";
 import axios from "axios";
+import { BASE_URL } from "../api/baseURL";
 const Signup = () => {
   const [user, setUser] = useState({
     username: "",
@@ -24,7 +25,7 @@ const Signup = () => {
     e.preventDefault();
 
     await axios
-      .post("http://localhost:5000/api/v1/users/signup", user)
+      .post(`${BASE_URL}/api/v1/users/signup`, user)
       .then((res) => alert(res.data.message))
       .catch((error) => console.log(error));
   };

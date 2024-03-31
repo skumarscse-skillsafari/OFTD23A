@@ -4,6 +4,7 @@ import FileBase64 from "react-file-base64";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../api/baseURL";
 const CreatePost = () => {
   const navigate = useNavigate();
   const [post, setPost] = useState({
@@ -25,13 +26,15 @@ const CreatePost = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const token = localStorage.getItem("token");
+    const token =
+      localStorage.getItem("token") ||
+      "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
     const jwt = JSON.parse(atob(token.split(".")[1]));
     console.log(jwt);
     const { id } = jwt;
     console.log(post);
     await axios
-      .post(`http://localhost:5000/api/v1/posts/${id}`, post, {
+      .post(`${BASE_URL}/api/v1/posts/${id}`, post, {
         headers: {
           "x-access-token": token,
         },

@@ -2,10 +2,13 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Button from "react-bootstrap/esm/Button";
 import { useNavigate } from "react-router-dom";
+import { BASE_URL } from "../api/baseURL";
 
 const Profile = () => {
   const navigate = useNavigate();
-  const token = localStorage.getItem("token");
+  const token =
+    localStorage.getItem("token") ||
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
   let userId = "";
   if (!token) {
     alert("User must login first");
@@ -19,10 +22,10 @@ const Profile = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/users/${userId}`)
+      .get(`${BASE_URL}/api/v1/users/${userId}`)
       .then((res) => setUser(res?.data?.data))
       .catch((error) => console.log(error));
-  }, []);
+  }, [userId]);
 
   const [user, setUser] = useState({});
   return (

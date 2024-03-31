@@ -4,6 +4,7 @@ import FileBase64 from "react-file-base64";
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import { BASE_URL } from "../api/baseURL";
 const UpdatePost = () => {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -15,10 +16,10 @@ const UpdatePost = () => {
   });
   useEffect(() => {
     axios
-      .get(`http://localhost:5000/api/v1/posts/${id}`)
+      .get(`${BASE_URL}/api/v1/posts/${id}`)
       .then((res) => setPost(res.data.data))
       .catch((error) => alert(error.response.data.message));
-  }, []);
+  }, [id]);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setPost((prev) => {
@@ -33,7 +34,7 @@ const UpdatePost = () => {
     e.preventDefault();
     const token = localStorage.getItem("token");
     await axios
-      .put(`http://localhost:5000/api/v1/posts/${id}`, post, {
+      .put(`${BASE_URL}/api/v1/posts/${id}`, post, {
         headers: {
           "x-access-token": token,
         },

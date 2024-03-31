@@ -2,16 +2,19 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import { BASE_URL } from "../api/baseURL";
 const Post = ({ post }) => {
-  const token = localStorage.getItem("token") || "";
-  const jwt = JSON.parse(atob(token.split(".")[1]));
-  const id = jwt.id;
+  const token =
+    localStorage.getItem("token") ||
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c";
+  const jwt = JSON?.parse(atob(token?.split(".")[1]));
+  const id = jwt?.id;
   console.log(id);
   const deletePost = async (e) => {
     e.preventDefault();
     const token = localStorage.getItem("token");
     await axios
-      .delete(`http://localhost:5000/api/v1/posts/${e.target.id}`, {
+      .delete(`${BASE_URL}/api/v1/posts/${e.target.id}`, {
         headers: {
           "x-access-token": token,
         },
